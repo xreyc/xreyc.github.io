@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Reyco Seguma favicon</title>
+  <desc id="desc">A blue square monogram R for Reyco Seguma.</desc>
+  <defs>
+    <linearGradient id="bg" x1="64" y1="48" x2="448" y2="464" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="0.58" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="146" y1="118" x2="362" y2="392" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e0f2fe"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+  <path d="M122 166c0-24.3 19.7-44 44-44h104c70.7 0 118 43.7 118 106 0 41.6-22.4 74.6-58.5 91.1l54.2 70.9H304l-46.7-61.9H200V390h-78V166Zm78 95h66c27.2 0 43-12.1 43-33s-15.8-33-43-33h-66v66Z" fill="url(#mark)"/>
+</svg>

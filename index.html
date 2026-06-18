@@ -1,20 +1,944 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-  <title>Reyco Seguma</title>
-  <script type="module" crossorigin src="/assets/index-C0QNTOrh.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-NStdzC6Q.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reyco Seguma | Fullstack Software Developer</title>
+    <meta name="description" content="Portfolio of Reyco Seguma, a fullstack software developer focused on distributed systems, cloud automation, microservices, and scalable product engineering.">
+    <meta name="author" content="Reyco Seguma">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#3b82f6">
+    <link rel="canonical" href="https://xreyc.github.io/">
+    <link rel="icon" href="assets/favicon.ico" sizes="any">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reyco Seguma">
+    <meta property="og:title" content="Reyco Seguma | Fullstack Software Developer">
+    <meta property="og:description" content="Fullstack software developer focused on distributed systems, cloud automation, microservices, and scalable product engineering.">
+    <meta property="og:url" content="https://xreyc.github.io/">
+    <meta property="og:image" content="https://xreyc.github.io/assets/profile.jpeg">
+    <meta property="og:image:alt" content="Portrait of Reyco Seguma">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Reyco Seguma | Fullstack Software Developer">
+    <meta name="twitter:description" content="Fullstack software developer focused on distributed systems, cloud automation, microservices, and scalable product engineering.">
+    <meta name="twitter:image" content="https://xreyc.github.io/assets/profile.jpeg">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ProfilePage",
+            "url": "https://xreyc.github.io/",
+            "name": "Reyco Seguma | Fullstack Software Developer",
+            "description": "Portfolio of Reyco Seguma, a fullstack software developer focused on distributed systems, cloud automation, microservices, and scalable product engineering.",
+            "mainEntity": {
+                "@type": "Person",
+                "name": "Reyco Seguma",
+                "url": "https://xreyc.github.io/",
+                "image": "https://xreyc.github.io/assets/profile.jpeg",
+                "jobTitle": "Fullstack Software Developer",
+                "email": "mailto:segumareyco@gmail.com",
+                "sameAs": [
+                    "https://github.com/xreyc",
+                    "https://linkedin.com/in/reyco-seguma"
+                ],
+                "knowsAbout": [
+                    "Distributed systems",
+                    "Cloud automation",
+                    "Microservices",
+                    "Serverless architecture",
+                    "Product engineering",
+                    "AI-assisted development",
+                    "Local LLM tooling"
+                ]
+            }
+        }
+    </script>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#3b82f6', // Electric Blue Primary
+                            600: '#2563eb',
+                            950: '#020617'
+                        },
+                        accent: {
+                            emerald: '#10b981',
+                            cyan: '#06b6d4',
+                            indigo: '#6366f1',
+                            fuchsia: '#d946ef'
+                        }
+                    },
+                    animation: {
+                        'spin-slow': 'spin 12s linear infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'blob': 'blob 10s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(20px, -40px) scale(1.05)' },
+                            '66%': { transform: 'translate(-15px, 15px) scale(0.95)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #020617;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 9999px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background: #334155;
+        }
+        
+        /* Premium Bento Border Gradient Glow */
+        .bento-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(148, 163, 184, 0.12);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .dark .bento-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .bento-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(59, 130, 246, 0.05);
+            border-color: rgba(59, 130, 246, 0.2);
+        }
+
+        .dark .bento-card:hover {
+            box-shadow: 0 12px 40px rgba(59, 130, 246, 0.12);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+    </style>
 </head>
+<body class="bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-100 antialiased font-sans transition-colors duration-300 selection:bg-brand-500 selection:text-white">
 
-<body>
-  <div id="root"></div>
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] bg-brand-500/10 dark:bg-brand-500/15 rounded-full blur-[140px] animate-blob"></div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[60%] h-[60%] bg-accent-indigo/10 dark:bg-accent-indigo/15 rounded-full blur-[140px] animate-blob" style="animation-delay: 4s;"></div>
+        
+        <!-- Interactive Technical Grid Background -->
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(15,23,42,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.02)_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_40%,#000_70%,transparent_100%)]"></div>
+    </div>
+
+    <header class="sticky top-0 z-50 w-full border-b border-slate-200/60 dark:border-slate-900/60 bg-white/70 dark:bg-slate-950/70 backdrop-blur-md transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-2 group">
+                <span class="h-9 w-9 rounded-lg shadow-md shadow-brand-500/10 overflow-hidden shrink-0">
+                    <img src="assets/favicon.svg" alt="Reyco Seguma icon" class="h-full w-full object-cover">
+                </span>
+                <span class="font-bold text-base tracking-tight bg-gradient-to-r from-slate-900 to-slate-600 dark:from-white dark:to-slate-400 bg-clip-text text-transparent group-hover:from-brand-500 group-hover:to-accent-indigo transition-all duration-300">Reyco Seguma</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-7">
+                <a href="#about" class="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white transition-colors duration-200">About</a>
+                <a href="#projects" class="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white transition-colors duration-200">Projects</a>
+                <a href="#experience" class="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white transition-colors duration-200">Experience</a>
+                <a href="#skills" class="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white transition-colors duration-200">Skills</a>
+                <a href="#contact" class="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white transition-colors duration-200">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <!-- Theme Toggle Button -->
+                <button id="themeToggle" class="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-900/60 transition-all duration-200" aria-label="Toggle Theme">
+                    <i id="themeIcon" class="fa-solid fa-moon text-base"></i>
+                </button>
+                
+                <!-- Quick Contact Action -->
+                <a href="#contact" class="hidden sm:inline-flex px-4 py-2 text-xs font-bold uppercase tracking-wider text-white bg-brand-500 hover:bg-brand-600 rounded-lg shadow-md shadow-brand-500/10 transition-all duration-300">
+                    Consult
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-900/60 transition-all duration-200">
+                    <i id="mobileMenuIcon" class="fa-solid fa-bars text-base"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden px-4 pt-2 pb-5 space-y-1.5 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950/95">
+            <a href="#about" class="block px-4 py-2 rounded-md text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900/40">About</a>
+            <a href="#projects" class="block px-4 py-2 rounded-md text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900/40">Projects</a>
+            <a href="#experience" class="block px-4 py-2 rounded-md text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900/40">Experience</a>
+            <a href="#skills" class="block px-4 py-2 rounded-md text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900/40">Skills</a>
+            <a href="#contact" class="block px-4 py-2 rounded-md text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900/40">Contact</a>
+        </div>
+    </header>
+
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20 space-y-16 md:space-y-20 lg:space-y-24">
+        
+        <!-- SECTION: Hero & Quick Bio Asymmetric Grid -->
+        <section id="about" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 scroll-mt-24">
+            <!-- Left Panel: Main Hero Title & Narrative -->
+            <div class="lg:col-span-8 bento-card rounded-3xl p-7 sm:p-9 lg:p-10 flex flex-col justify-between space-y-8">
+                <div class="space-y-5">
+                    <!-- Status Active Pipeline Badge -->
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-[10px] font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">
+                        <span class="flex h-1.5 w-1.5 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-emerald opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent-emerald"></span>
+                        </span>
+                        <span>Building Reliable Product Systems</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-none text-slate-900 dark:text-white">
+                        Reyco Seguma
+                    </h1>
+                    <h2 class="text-base sm:text-lg font-bold text-brand-500 font-mono">
+                        &lt;Fullstack Software Developer /&gt;
+                    </h2>
+
+                    <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl">
+                        I build software systems that are reliable, maintainable, and ready to scale with real product needs. My work spans backend services, event-driven workflows, cloud automation, and user-facing applications, with a strong focus on clean boundaries, practical system design, and engineering choices that hold up in production.
+                    </p>
+                </div>
+
+                <!-- Technical Core Tenets Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 pt-6 border-t border-slate-200/50 dark:border-slate-800/50">
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Strength</h4>
+                        <p class="text-sm font-semibold text-slate-800 dark:text-slate-200">System Design</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Approach</h4>
+                        <p class="text-sm font-semibold text-slate-800 dark:text-slate-200">Clean Architecture</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Delivery</h4>
+                        <p class="text-sm font-semibold text-slate-800 dark:text-slate-200">Automation & CI/CD</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel: Compact Photo Card & Metrics -->
+            <div class="lg:col-span-4 flex flex-col gap-6 lg:gap-8">
+                <!-- Profile Image Frame (Specifically resized to be compact and elegant) -->
+                <div class="bento-card rounded-3xl p-7 sm:p-8 flex flex-col items-center justify-center text-center relative overflow-hidden group">
+                    <div class="absolute -right-16 -top-16 w-32 h-32 bg-accent-indigo/10 dark:bg-accent-indigo/20 rounded-full blur-xl group-hover:scale-125 transition-all duration-500"></div>
+                    
+                    <!-- Avatar Frame (Perfectly size-optimized: w-28 h-28) -->
+                    <div class="relative w-28 h-28 mb-4">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-brand-500 to-accent-indigo rounded-full blur-md opacity-40 group-hover:opacity-75 transition-all duration-500 animate-pulse-slow"></div>
+                        <div class="relative rounded-full p-0.5 bg-gradient-to-tr from-brand-500 via-accent-indigo to-accent-cyan overflow-hidden w-full h-full">
+                            <img id="profileImage" src="assets/profile.jpeg" alt="Reyco Seguma" class="w-full h-full object-cover rounded-full aspect-square bg-slate-900">
+                            <div class="pointer-events-none absolute inset-0 rounded-full bg-brand-500/10 mix-blend-soft-light"></div>
+                        </div>
+                        <div class="absolute bottom-1 right-1 h-3.5 w-3.5 bg-accent-emerald border-2 border-white dark:border-slate-950 rounded-full"></div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base">Reyco Seguma</h3>
+                    <p class="text-xs font-mono text-slate-500 dark:text-slate-400 mb-4">Fullstack Developer</p>
+                    
+                    <div class="flex space-x-2 w-full">
+                        <a href="https://github.com/xreyc" target="_blank" class="flex-1 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-brand-500 hover:text-white flex items-center justify-center text-slate-700 dark:text-slate-300 text-xs font-semibold transition-all duration-300">
+                            <i class="fa-brands fa-github mr-1.5"></i> GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/reyco-seguma" target="_blank" class="flex-1 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-brand-500 hover:text-white flex items-center justify-center text-slate-700 dark:text-slate-300 text-xs font-semibold transition-all duration-300">
+                            <i class="fa-brands fa-linkedin mr-1.5"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Stats Frame -->
+                <div class="bento-card rounded-3xl p-7 grid grid-cols-2 gap-5">
+                    <div class="text-left border-r border-slate-200/50 dark:border-slate-800/50 pr-2">
+                        <span class="text-2xl font-black text-brand-500 block">8+</span>
+                        <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Years Experience</span>
+                    </div>
+                    <div class="text-left pl-2">
+                        <span class="text-2xl font-black text-accent-indigo block">2+</span>
+                        <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Active Platforms</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Flagship Projects Portfolio -->
+        <section id="projects" class="scroll-mt-24 space-y-6">
+            <div class="flex items-center justify-between px-2">
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-brand-500">My Systems</h3>
+                    <h2 class="text-xl font-black text-slate-900 dark:text-white">Active Ecosystems</h2>
+                </div>
+                <div class="h-px flex-1 bg-slate-200/50 dark:bg-slate-800/50 mx-6 hidden sm:block"></div>
+                <span class="text-xs font-mono text-slate-400 hidden sm:block">Total modules: 02</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- PROJECT: Maintainerd -->
+                <div class="bento-card rounded-3xl p-7 sm:p-9 flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute top-4 right-4">
+                        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20">
+                            Flagship OSS
+                        </span>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-brand-500 to-accent-indigo flex items-center justify-center text-white text-base font-black">
+                                M9
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors duration-200">Maintainerd</h3>
+                                <p class="text-xs text-slate-400 font-mono">maintainerd.github.io</p>
+                            </div>
+                        </div>
+
+                        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+                            <strong>Open-source, self-hostable cloud services for app teams.</strong> Gives developers product and platform services they can inspect, run, and own, with standalone modules that can connect through M9d-Core as a shared control plane.
+                        </p>
+
+                        <!-- Subsystems Micro-List -->
+                        <div class="p-4 rounded-2xl bg-slate-100/50 dark:bg-slate-900/30 border border-slate-200/50 dark:border-slate-800/50 space-y-3">
+                            <h4 class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Core Subsystem Components</h4>
+                            <div class="grid grid-cols-1 gap-2 text-xs">
+                                <div class="flex items-center space-x-2 text-slate-700 dark:text-slate-300">
+                                    <span class="h-1 w-1 rounded-full bg-accent-emerald"></span>
+                                    <span><strong>maintainerd-auth:</strong> Multi-tenant authentication and identity service.</span>
+                                </div>
+                                <div class="flex items-center space-x-2 text-slate-700 dark:text-slate-300">
+                                    <span class="h-1 w-1 rounded-full bg-accent-cyan"></span>
+                                    <span><strong>M9d-Core:</strong> Shared control plane for connecting Maintainerd services.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tech Badges -->
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200/50 dark:bg-slate-800/80 text-[10px] font-mono text-slate-700 dark:text-slate-400">Golang</span>
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200/50 dark:bg-slate-800/80 text-[10px] font-mono text-slate-700 dark:text-slate-400">PostgreSQL</span>
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200/50 dark:bg-slate-800/80 text-[10px] font-mono text-slate-700 dark:text-slate-400">ReactJS</span>
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200/50 dark:bg-slate-800/80 text-[10px] font-mono text-slate-700 dark:text-slate-400">Tailwind</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-5 border-t border-slate-200/50 dark:border-slate-800/50 flex items-center justify-between">
+                        <a href="https://maintainerd.github.io/" target="_blank" class="text-xs font-bold text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center space-x-1.5">
+                            <i class="fa-solid fa-earth-americas"></i> <span>Project Site</span>
+                        </a>
+                        <a href="https://github.com/maintainerd" target="_blank" class="text-xs font-bold text-brand-500 hover:text-brand-600 flex items-center space-x-1.5">
+                            <i class="fa-brands fa-github"></i> <span>GitHub Organization</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROJECT: Medlexer -->
+                <div class="bento-card rounded-3xl p-7 sm:p-9 flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute top-4 right-4">
+                        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-accent-emerald/10 text-accent-emerald border border-accent-emerald/20">
+                            Enterprise Software
+                        </span>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-accent-emerald to-accent-cyan flex items-center justify-center text-white text-base font-black">
+                                Mx
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-accent-emerald transition-colors duration-200">Medlexer</h3>
+                                <p class="text-xs text-slate-400 font-mono">Hospital & Laboratory Information Platform</p>
+                            </div>
+                        </div>
+
+                        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+                            <strong>Integrated HIS and LIS operations platform.</strong> Supports hospital workflows, patient results, laboratory result automation, and approval processes, with healthcare data standards such as HL7 and ICD-10 built into the application flow.
+                        </p>
+
+                        <!-- Key Architecture Blocks -->
+                        <div class="p-4 rounded-2xl bg-slate-100/50 dark:bg-slate-900/30 border border-slate-200/50 dark:border-slate-800/50 space-y-3">
+                            <h4 class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Integrated Control Blocks</h4>
+                            <div class="grid grid-cols-1 gap-2 text-xs">
+                                <div class="flex items-center space-x-2 text-slate-700 dark:text-slate-300">
+                                    <span class="h-1 w-1 rounded-full bg-accent-indigo"></span>
+                                    <span><strong>Clinical Operations:</strong> Patient records, hospital processes, results tracking, and controlled access workflows.</span>
+                                </div>
+                                <div class="flex items-center space-x-2 text-slate-700 dark:text-slate-300">
+                                    <span class="h-1 w-1 rounded-full bg-accent-fuchsia"></span>
+                                    <span><strong>Laboratory Automation:</strong> LIS result processing, validation, approvals, and standards-aware integrations.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tech Badges -->
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200/50 dark:bg-slate-800/80 text-[10px] font-mono text-slate-700 dark:text-slate-400">.NET / C#</span>
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200/50 dark:bg-slate-800/80 text-[10px] font-mono text-slate-700 dark:text-slate-400">Electron</span>
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200/50 dark:bg-slate-800/80 text-[10px] font-mono text-slate-700 dark:text-slate-400">PostgreSQL</span>
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200/50 dark:bg-slate-800/80 text-[10px] font-mono text-slate-700 dark:text-slate-400">HL7</span>
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200/50 dark:bg-slate-800/80 text-[10px] font-mono text-slate-700 dark:text-slate-400">ICD-10</span>
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200/50 dark:bg-slate-800/80 text-[10px] font-mono text-slate-700 dark:text-slate-400">Automation</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-5 border-t border-slate-200/50 dark:border-slate-800/50 flex items-center justify-between text-xs font-mono text-slate-400">
+                        <span>Intelligent Healthcare Controls</span>
+                        <span>Established 2022</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Career Milestones Terminal Logs -->
+        <section id="experience" class="scroll-mt-24 space-y-6">
+            <div class="flex items-center justify-between px-2">
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-brand-500">Timeline</h3>
+                    <h2 class="text-xl font-black text-slate-900 dark:text-white">Career Systems Log</h2>
+                </div>
+                <div class="h-px flex-1 bg-slate-200/50 dark:bg-slate-800/50 mx-6 hidden sm:block"></div>
+                <span class="text-xs font-mono text-slate-400 hidden sm:block">Status: Connected</span>
+            </div>
+
+            <!-- Experience Bento List styled as System Traces -->
+            <div class="relative space-y-5 md:pl-5">
+                <div class="absolute left-0 top-3 bottom-3 hidden md:block w-px bg-gradient-to-b from-brand-500 via-accent-indigo to-slate-500/40"></div>
+                
+                <!-- JOB: Full Scale -->
+                <div class="bento-card rounded-2xl p-6 sm:p-7 relative overflow-visible ring-1 ring-brand-500/10 bg-gradient-to-br from-brand-500/[0.08] via-white/70 to-white/70 dark:from-brand-500/[0.12] dark:via-slate-900/70 dark:to-slate-950/50">
+                    <div class="absolute -left-[27px] top-8 hidden md:flex h-4 w-4 rounded-full bg-brand-500 ring-4 ring-slate-50 dark:ring-slate-950"></div>
+                    <div class="absolute right-0 top-0 h-24 w-24 rounded-bl-full bg-brand-500/10 dark:bg-brand-500/15"></div>
+                    <div class="absolute top-0 bottom-0 left-0 w-1 bg-brand-500"></div>
+                    <div class="relative flex flex-col md:flex-row md:items-start justify-between gap-5">
+                        <div class="space-y-3 max-w-4xl">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="px-2 py-0.5 rounded-md bg-brand-500/10 text-brand-600 dark:text-brand-400 text-[10px] font-mono font-bold uppercase">Lead Full Stack Developer</span>
+                                <span class="px-2 py-0.5 rounded-md bg-accent-emerald/10 text-accent-emerald text-[10px] font-mono font-bold uppercase">Current</span>
+                                <span class="text-xs text-slate-400 font-mono">ID: FS-LULA</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">
+                                Full Scale <span class="text-slate-400 font-normal">for</span> Lula
+                            </h3>
+                            <p class="text-xs font-bold text-slate-600 dark:text-slate-400 font-mono">
+                                Primary Product: <a href="https://lula.life/ai-work-order-software-for-property-managers" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:underline inline-flex items-center space-x-1"><span>Foresight Work Order Platform</span> <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i></a>
+                            </p>
+                            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed max-w-4xl">
+                                Leading backend and frontend work for Full Scale's Philippine team supporting Lula's Foresight product, in collaboration with distributed teams across the Philippines, India, the US, and other regions. Owns feature delivery across service request intake, work order creation, dispatching, multi-vendor completion flows, external service integrations, and ongoing product enhancements for property maintenance operations.
+                            </p>
+                            <div class="flex flex-wrap gap-2 pt-1">
+                                <span class="px-2.5 py-1 rounded-lg bg-white/70 dark:bg-slate-950/50 border border-slate-200/60 dark:border-slate-800/70 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">Team Lead</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white/70 dark:bg-slate-950/50 border border-slate-200/60 dark:border-slate-800/70 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">Work Orders</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white/70 dark:bg-slate-950/50 border border-slate-200/60 dark:border-slate-800/70 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">Dispatching</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white/70 dark:bg-slate-950/50 border border-slate-200/60 dark:border-slate-800/70 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">Vendor Flows</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white/70 dark:bg-slate-950/50 border border-slate-200/60 dark:border-slate-800/70 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">Integrations</span>
+                            </div>
+                        </div>
+                        <div class="text-left md:text-right shrink-0">
+                            <span class="inline-flex px-3 py-1 rounded-lg bg-white/80 dark:bg-slate-950/70 text-xs font-mono font-bold text-slate-700 dark:text-slate-300 border border-brand-500/20 shadow-sm shadow-brand-500/5">
+                                March 2024 - Present
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JOB: Via Appia (Innovations) -->
+                <div class="bento-card rounded-2xl p-6 sm:p-7 relative overflow-visible">
+                    <div class="absolute -left-[27px] top-8 hidden md:flex h-4 w-4 rounded-full bg-accent-indigo ring-4 ring-slate-50 dark:ring-slate-950"></div>
+                    <div class="absolute top-0 bottom-0 left-0 w-1 bg-accent-indigo"></div>
+                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-5">
+                        <div class="space-y-3 max-w-4xl">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="px-2 py-0.5 rounded-md bg-accent-indigo/10 text-accent-indigo text-[10px] font-mono font-bold uppercase">Innovations</span>
+                                <span class="text-xs text-slate-400 font-mono">ID: VA-03</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">
+                                Via Appia Philippines
+                            </h3>
+                            <p class="text-xs font-bold text-slate-600 dark:text-slate-400 font-mono">Role Track: Innovations</p>
+                            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed max-w-4xl">
+                                Moved into the Innovations group to explore and deliver new application capabilities for client-facing systems. Focused on turning early product ideas into working software, improving integration patterns, and keeping implementations maintainable enough for production handoff.
+                            </p>
+                            <div class="flex flex-wrap gap-2 pt-1">
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100/80 dark:bg-slate-900/70 border border-slate-200/60 dark:border-slate-800/70 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">Innovation Delivery</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100/80 dark:bg-slate-900/70 border border-slate-200/60 dark:border-slate-800/70 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">Client Systems</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100/80 dark:bg-slate-900/70 border border-slate-200/60 dark:border-slate-800/70 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">Production Handoff</span>
+                            </div>
+                        </div>
+                        <div class="text-left md:text-right shrink-0">
+                            <span class="inline-flex px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 text-xs font-mono font-bold text-slate-600 dark:text-slate-400 border border-slate-200/40 dark:border-slate-800/40">
+                                Sept 2023 - March 2024
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JOB: Via Appia (Technical Consultant) -->
+                <div class="bento-card rounded-2xl p-6 sm:p-7 relative overflow-visible">
+                    <div class="absolute -left-[27px] top-8 hidden md:flex h-4 w-4 rounded-full bg-accent-cyan ring-4 ring-slate-50 dark:ring-slate-950"></div>
+                    <div class="absolute top-0 bottom-0 left-0 w-1 bg-accent-cyan"></div>
+                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-5">
+                        <div class="space-y-3 max-w-4xl">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="px-2 py-0.5 rounded-md bg-accent-cyan/10 text-accent-cyan text-[10px] font-mono font-bold uppercase">Technical Consultant</span>
+                                <span class="text-xs text-slate-400 font-mono">ID: VA-02</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">
+                                Via Appia Philippines
+                            </h3>
+                            <p class="text-xs font-bold text-slate-600 dark:text-slate-400 font-mono">Role Track: Technical Consulting</p>
+                            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed max-w-4xl">
+                                Delivered client-facing technical consulting across requirements, solution design, backend and frontend implementation, database work, deployment coordination, and production support. Balanced hands-on development with practical guidance so client systems could be delivered cleanly and maintained after release.
+                            </p>
+                            <div class="flex flex-wrap gap-2 pt-1">
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100/80 dark:bg-slate-900/70 border border-slate-200/60 dark:border-slate-800/70 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">Solution Design</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100/80 dark:bg-slate-900/70 border border-slate-200/60 dark:border-slate-800/70 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">Full Stack Delivery</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100/80 dark:bg-slate-900/70 border border-slate-200/60 dark:border-slate-800/70 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">Production Support</span>
+                            </div>
+                        </div>
+                        <div class="text-left md:text-right shrink-0">
+                            <span class="inline-flex px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 text-xs font-mono font-bold text-slate-600 dark:text-slate-400 border border-slate-200/40 dark:border-slate-800/40">
+                                March 2021 - Sept 2023
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JOB: Via Appia (Junior Technical Consultant) -->
+                <div class="bento-card rounded-2xl p-6 sm:p-7 relative overflow-visible">
+                    <div class="absolute -left-[27px] top-8 hidden md:flex h-4 w-4 rounded-full bg-slate-400 ring-4 ring-slate-50 dark:ring-slate-950"></div>
+                    <div class="absolute top-0 bottom-0 left-0 w-1 bg-slate-400"></div>
+                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-5">
+                        <div class="space-y-3 max-w-4xl">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="px-2 py-0.5 rounded-md bg-slate-400/10 text-slate-500 text-[10px] font-mono font-bold uppercase">Junior Technical Consultant</span>
+                                <span class="text-xs text-slate-400 font-mono">ID: VA-01</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">
+                                Via Appia Philippines
+                            </h3>
+                            <p class="text-xs font-bold text-slate-600 dark:text-slate-400 font-mono">Role Track: Engineering Foundation</p>
+                            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed max-w-4xl">
+                                Built the foundation for professional consulting work across web application development, database design, business process platforms, and delivery support. Contributed to prototypes and production applications while growing from implementation tasks into broader client-facing engineering responsibilities.
+                            </p>
+                            <div class="flex flex-wrap gap-2 pt-1">
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100/80 dark:bg-slate-900/70 border border-slate-200/60 dark:border-slate-800/70 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">Web Applications</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100/80 dark:bg-slate-900/70 border border-slate-200/60 dark:border-slate-800/70 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">Database Design</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100/80 dark:bg-slate-900/70 border border-slate-200/60 dark:border-slate-800/70 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">Delivery Support</span>
+                            </div>
+                        </div>
+                        <div class="text-left md:text-right shrink-0">
+                            <span class="inline-flex px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 text-xs font-mono font-bold text-slate-600 dark:text-slate-400 border border-slate-200/40 dark:border-slate-800/40">
+                                March 2019 - March 2021
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION: Technical Arsenal & Dynamic Filtering -->
+        <section id="skills" class="scroll-mt-24 space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 px-2">
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-brand-500">Arsenal</h3>
+                    <h2 class="text-xl font-black text-slate-900 dark:text-white">Verified Stack</h2>
+                </div>
+                
+                <!-- Category Tabs -->
+                <div class="flex flex-wrap items-center gap-2 p-1.5 rounded-2xl bg-slate-200/40 dark:bg-slate-900/40 border border-slate-200/50 dark:border-slate-800/50">
+                    <button onclick="filterSkills('all')" class="skill-tab active px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all duration-200 bg-brand-500 text-white shadow-sm">All</button>
+                    <button onclick="filterSkills('ai')" class="skill-tab px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all duration-200 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">AI</button>
+                    <button onclick="filterSkills('frontend')" class="skill-tab px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all duration-200 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">Frontend</button>
+                    <button onclick="filterSkills('backend')" class="skill-tab px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all duration-200 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">Backend</button>
+                    <button onclick="filterSkills('devops')" class="skill-tab px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all duration-200 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">Cloud/DevOps</button>
+                    <button onclick="filterSkills('databases')" class="skill-tab px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all duration-200 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">Databases</button>
+                </div>
+            </div>
+
+            <!-- Skills Grid -->
+            <div id="skillsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+
+                <!-- AI -->
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="ai">
+                    <span class="text-[#d97706] text-lg"><i class="fa-solid fa-robot"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">Claude</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="ai">
+                    <span class="text-brand-500 text-lg"><i class="fa-solid fa-terminal"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">Codex</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="ai">
+                    <span class="text-[#8b5cf6] text-lg"><i class="fa-solid fa-code-branch"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">Augment Code</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="ai">
+                    <span class="text-[#10b981] text-lg"><i class="fa-solid fa-server"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">Ollama</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="ai">
+                    <span class="text-[#06b6d4] text-lg"><i class="fa-solid fa-brain"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">Gemma 4</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="ai">
+                    <span class="text-[#2563eb] text-lg"><i class="fa-solid fa-microchip"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">Qwen 3.7</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="ai">
+                    <span class="text-[#64748b] text-lg"><i class="fa-solid fa-code"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">OpenCode</span>
+                </div>
+                
+                <!-- FRONTEND -->
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="frontend">
+                    <span class="text-[#38bdf8] text-lg"><i class="fa-brands fa-react"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">ReactJS</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="frontend">
+                    <span class="text-[#446b9e] text-lg"><i class="fa-solid fa-cube"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">SolidJS</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="frontend">
+                    <span class="text-[#41b883] text-lg"><i class="fa-brands fa-vuejs"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">VueJS</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="frontend">
+                    <span class="text-[#3178c6] text-lg"><i class="fa-solid fa-code"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">TypeScript</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="frontend">
+                    <span class="text-[#0284c7] text-lg"><i class="fa-solid fa-mobile-screen-button"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">Flutter / Dart</span>
+                </div>
+                
+                <!-- BACKEND -->
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="backend">
+                    <span class="text-[#00acd7] text-lg"><i class="fa-brands fa-golang"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">Go (Golang)</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="backend">
+                    <span class="text-[#68a063] text-lg"><i class="fa-brands fa-node-js"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">Node.js</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="backend">
+                    <span class="text-[#007acc] text-lg"><i class="fa-solid fa-terminal"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">C# / .NET Core</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="backend">
+                    <span class="text-[#ff2d20] text-lg"><i class="fa-brands fa-laravel"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">Laravel</span>
+                </div>
+
+                <!-- DEVOPS -->
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="devops">
+                    <span class="text-[#ff9900] text-lg"><i class="fa-brands fa-aws"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">AWS (CDK)</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="devops">
+                    <span class="text-[#4285f4] text-lg"><i class="fa-brands fa-google"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">GCP (Cloud Run)</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="devops">
+                    <span class="text-[#2496ed] text-lg"><i class="fa-brands fa-docker"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">Docker</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="devops">
+                    <span class="text-[#326ce5] text-lg"><i class="fa-solid fa-circle-nodes"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">Kubernetes</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="devops">
+                    <span class="text-[#2088ff] text-lg"><i class="fa-brands fa-github-alt"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">GitHub Actions</span>
+                </div>
+
+                <!-- DATABASES -->
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="databases">
+                    <span class="text-[#336791] text-lg"><i class="fa-solid fa-database"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">PostgreSQL</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="databases">
+                    <span class="text-[#00758f] text-lg"><i class="fa-solid fa-database"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">MySQL</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="databases">
+                    <span class="text-[#4db33d] text-lg"><i class="fa-solid fa-leaf"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">MongoDB</span>
+                </div>
+                <div class="skill-card bento-card p-4 rounded-2xl flex items-center space-x-3" data-category="databases">
+                    <span class="text-[#ba291f] text-lg"><i class="fa-solid fa-fire-flame-simple"></i></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">Redis</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Modern Direct Contact & Transmission Form -->
+        <section id="contact" class="scroll-mt-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Info Block -->
+                <div class="lg:col-span-5 bento-card rounded-3xl p-7 sm:p-9 flex flex-col justify-between space-y-9">
+                    <div class="space-y-5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-brand-500 font-mono">Ready to scale?</span>
+                        <h3 class="text-2xl font-black text-slate-900 dark:text-white leading-tight">System Node Connection</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+                            Let's coordinate on structural designs, distributed APIs, microservices configurations, or contribute directly to the <strong>Maintainerd</strong> project hub.
+                        </p>
+                    </div>
+
+                    <!-- Direct Access Lines -->
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3 p-4 rounded-2xl bg-white/50 dark:bg-slate-900/60 border border-slate-200/50 dark:border-slate-800/50 relative group">
+                            <span class="text-brand-500 text-base h-8 w-8 rounded-lg bg-brand-500/10 flex items-center justify-center"><i class="fa-solid fa-envelope"></i></span>
+                            <div class="flex-1 min-w-0">
+                                <span class="text-[9px] text-slate-400 uppercase font-black tracking-wider block">Email Node</span>
+                                <p id="emailText" class="text-xs font-bold text-slate-800 dark:text-slate-200 truncate">segumareyco@gmail.com</p>
+                            </div>
+                            <button onclick="copyToClipboard('emailText')" class="p-2 rounded-lg bg-slate-200/50 dark:bg-slate-800/50 hover:bg-brand-500/10 transition-all duration-300" title="Copy Email">
+                                <i class="fa-solid fa-copy text-xs"></i>
+                            </button>
+                        </div>
+
+                        <div class="flex items-center space-x-3 p-4 rounded-2xl bg-white/50 dark:bg-slate-900/60 border border-slate-200/50 dark:border-slate-800/50 relative group">
+                            <span class="text-accent-indigo text-base h-8 w-8 rounded-lg bg-accent-indigo/10 flex items-center justify-center"><i class="fa-solid fa-phone"></i></span>
+                            <div class="flex-1 min-w-0">
+                                <span class="text-[9px] text-slate-400 uppercase font-black tracking-wider block">Phone Node</span>
+                                <p id="phoneText" class="text-xs font-bold text-slate-800 dark:text-slate-200 truncate">+63 (908) 944 4999</p>
+                            </div>
+                            <button onclick="copyToClipboard('phoneText')" class="p-2 rounded-lg bg-slate-200/50 dark:bg-slate-800/50 hover:bg-brand-500/10 transition-all duration-300" title="Copy Contact Number">
+                                <i class="fa-solid fa-copy text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Status indicators -->
+                    <div class="text-xs font-mono text-slate-400 border-t border-slate-200/50 dark:border-slate-800/50 pt-4 flex justify-between">
+                        <span>Cluster: AP-EAST</span>
+                        <span>Uptime: 99.99%</span>
+                    </div>
+                </div>
+
+                <!-- Message Transmission Box -->
+                <div class="lg:col-span-7 bento-card rounded-3xl p-7 sm:p-9">
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest block font-mono">Caller Name</label>
+                                <input type="text" id="name" required class="w-full bg-white/50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80 rounded-xl px-4 py-2.5 text-xs text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-brand-500 focus:border-transparent transition-all" placeholder="E.g., Dr. Elizabeth">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest block font-mono">Caller Email</label>
+                                <input type="email" id="email" required class="w-full bg-white/50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80 rounded-xl px-4 py-2.5 text-xs text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-brand-500 focus:border-transparent transition-all" placeholder="elizabeth@domain.com">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest block font-mono">Subject Routing</label>
+                            <input type="text" id="subject" required class="w-full bg-white/50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80 rounded-xl px-4 py-2.5 text-xs text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-brand-500 focus:border-transparent transition-all" placeholder="E.g., Microservice integration discussion">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest block font-mono">Message Payload</label>
+                            <textarea id="message" rows="4" required class="w-full bg-white/50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80 rounded-xl px-4 py-2.5 text-xs text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-brand-500 focus:border-transparent transition-all" placeholder="Hi Reyco, let's establish a telemetry console connection..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3 bg-gradient-to-r from-brand-500 to-accent-indigo hover:from-brand-600 hover:to-accent-indigo text-white font-bold uppercase tracking-widest text-[10px] rounded-xl shadow-lg shadow-brand-500/10 transition-all duration-300">
+                            Transmit Packet
+                        </button>
+                    </form>
+
+                    <!-- Feedback message toast -->
+                    <div id="toastMessage" class="hidden mt-4 p-3.5 bg-accent-emerald/10 border border-accent-emerald/20 text-accent-emerald rounded-2xl text-xs font-semibold flex items-center space-x-2">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Simulation complete. Signal transmitted correctly! I will follow up shortly.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-200/60 dark:border-slate-900/60 bg-white dark:bg-slate-950 text-slate-500 py-12 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-2">
+                <div class="h-7 w-7 rounded bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center font-black text-slate-700 dark:text-slate-300 text-xs">R</div>
+                <p class="text-xs">&copy; 2026 Reyco Seguma. Formatted on modern asymmetric design guidelines.</p>
+            </div>
+            
+            <div class="flex items-center space-x-5 text-[10px] font-mono uppercase tracking-wider">
+                <a href="https://github.com/xreyc" target="_blank" class="hover:text-slate-900 dark:hover:text-white transition-colors">GitHub</a>
+                <a href="https://linkedin.com/in/reyco-seguma" target="_blank" class="hover:text-slate-900 dark:hover:text-white transition-colors">LinkedIn</a>
+                <a href="#projects" class="hover:text-slate-900 dark:hover:text-white transition-colors">Ecosystems</a>
+                <a href="#skills" class="hover:text-slate-900 dark:hover:text-white transition-colors">Stack</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const toastMessage = document.getElementById('toastMessage');
+        const profileImage = document.getElementById('profileImage');
+
+        // Robust profile photo loading handler with placeholder redundancy
+        profileImage.onerror = function() {
+            console.warn("Using placeholder graphic for profile avatar.");
+            this.src = "https://placehold.co/200x200/020617/ffffff?text=Reyco";
+        };
+
+        // Theme initialization logic
+        function initializeTheme() {
+            if (localStorage.getItem('theme') === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+                document.documentElement.classList.remove('dark');
+                themeIcon.className = 'fa-solid fa-sun text-base';
+            } else {
+                document.documentElement.classList.add('dark');
+                themeIcon.className = 'fa-solid fa-moon text-base';
+            }
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                themeIcon.className = 'fa-solid fa-sun text-base';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                themeIcon.className = 'fa-solid fa-moon text-base';
+            }
+        });
+
+        // Mobile responsive sidebar activation
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenuIcon.className = 'fa-solid fa-bars text-base';
+            } else {
+                mobileMenuIcon.className = 'fa-solid fa-xmark text-base';
+            }
+        });
+
+        // Dynamic Filtering Core for skills grids
+        function filterSkills(category) {
+            const tabs = document.querySelectorAll('.skill-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-brand-500', 'text-white', 'shadow-sm');
+                tab.classList.add('text-slate-600', 'dark:text-slate-400', 'hover:text-slate-900', 'dark:hover:text-white');
+            });
+
+            // Locate clicked category trigger and paint active styles
+            const activeTab = Array.from(tabs).find(t => t.getAttribute('onclick').includes(`'${category}'`));
+            if (activeTab) {
+                activeTab.classList.remove('text-slate-600', 'dark:text-slate-400', 'hover:text-slate-900', 'dark:hover:text-white');
+                activeTab.classList.add('bg-brand-500', 'text-white', 'shadow-sm');
+            }
+
+            const cards = document.querySelectorAll('.skill-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Clipboard Copy Utility Conforming to sandbox environments
+        function copyToClipboard(elementId) {
+            const targetText = document.getElementById(elementId).innerText;
+            const helperInput = document.createElement('input');
+            helperInput.value = targetText;
+            document.body.appendChild(helperInput);
+            helperInput.select();
+            
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    const button = document.querySelector(`[onclick="copyToClipboard('${elementId}')"]`);
+                    const initialInner = button.innerHTML;
+                    button.innerHTML = '<i class="fa-solid fa-check text-accent-emerald text-xs"></i>';
+                    setTimeout(() => {
+                        button.innerHTML = initialInner;
+                    }, 2000);
+                }
+            } catch (err) {
+                console.error('Copy event aborted: ', err);
+            }
+            document.body.removeChild(helperInput);
+        }
+
+        // Contact packet transmission simulated workflow
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const formElement = document.getElementById('contactForm');
+            const buttonElement = formElement.querySelector('button[type="submit"]');
+            const initialButtonText = buttonElement.innerText;
+            
+            buttonElement.disabled = true;
+            buttonElement.innerText = 'Transmitting Message...';
+
+            setTimeout(() => {
+                toastMessage.classList.remove('hidden');
+                buttonElement.innerText = initialButtonText;
+                buttonElement.disabled = false;
+                formElement.reset();
+
+                setTimeout(() => {
+                    toastMessage.classList.add('hidden');
+                }, 8000);
+            }, 800);
+        }
+
+        // Run theme configuration directly on window loading completion
+        window.onload = function() {
+            initializeTheme();
+        };
+    </script>
 </body>
-
 </html>
