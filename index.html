@@ -162,6 +162,10 @@
             box-shadow: 0 12px 40px rgba(59, 130, 246, 0.12);
             border-color: rgba(59, 130, 246, 0.3);
         }
+
+        #skillsGrid .skill-card.bento-card {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-100 antialiased font-sans transition-colors duration-300 selection:bg-brand-500 selection:text-white">
@@ -1205,6 +1209,85 @@
         }
 
         // Run theme configuration directly on window loading completion
+        const skillUrls = {
+            'Claude': 'https://claude.ai',
+            'Codex': 'https://openai.com/codex',
+            'Augment Code': 'https://www.augmentcode.com',
+            'Ollama': 'https://ollama.com',
+            'Gemma 4': 'https://ai.google.dev/gemma',
+            'Qwen 3.7': 'https://qwenlm.github.io',
+            'OpenCode': 'https://opencode.ai',
+            'ReactJS': 'https://react.dev',
+            'SolidJS': 'https://www.solidjs.com',
+            'VueJS': 'https://vuejs.org',
+            'TypeScript': 'https://www.typescriptlang.org',
+            'Flutter / Dart': 'https://flutter.dev',
+            'Next.js': 'https://nextjs.org',
+            'Vite': 'https://vitejs.dev',
+            'AvaloniaUI': 'https://avaloniaui.net',
+            'Go (Golang)': 'https://go.dev',
+            'Node.js': 'https://nodejs.org',
+            'C# / .NET Core': 'https://dotnet.microsoft.com',
+            'Laravel': 'https://laravel.com',
+            'RabbitMQ': 'https://www.rabbitmq.com',
+            'Apache Kafka': 'https://kafka.apache.org',
+            'EC2': 'https://aws.amazon.com/ec2',
+            'ECS': 'https://aws.amazon.com/ecs',
+            'EKS': 'https://aws.amazon.com/eks',
+            'Lambda': 'https://aws.amazon.com/lambda',
+            'Elastic Beanstalk': 'https://aws.amazon.com/elasticbeanstalk',
+            'CDK': 'https://aws.amazon.com/cdk',
+            'CloudFormation': 'https://aws.amazon.com/cloudformation',
+            'API Gateway': 'https://aws.amazon.com/api-gateway',
+            'VPC': 'https://aws.amazon.com/vpc',
+            'ELB': 'https://aws.amazon.com/elasticloadbalancing',
+            'WAF': 'https://aws.amazon.com/waf',
+            'CloudWatch': 'https://aws.amazon.com/cloudwatch',
+            'SSM': 'https://aws.amazon.com/systems-manager',
+            'Secrets Manager': 'https://aws.amazon.com/secrets-manager',
+            'Cloud Run': 'https://cloud.google.com/run',
+            'App Engine': 'https://cloud.google.com/appengine',
+            'Cloud Functions': 'https://cloud.google.com/functions',
+            'Identity Platform': 'https://cloud.google.com/identity-platform',
+            'Firebase': 'https://firebase.google.com',
+            'Firestore': 'https://firebase.google.com/products/firestore',
+            'Docker': 'https://www.docker.com',
+            'Kubernetes': 'https://kubernetes.io',
+            'Helm': 'https://helm.sh',
+            'Serverless': 'https://www.serverless.com',
+            'Git': 'https://git-scm.com',
+            'GitHub': 'https://github.com',
+            'GitHub Actions': 'https://github.com/features/actions',
+            'Netlify': 'https://www.netlify.com',
+            'Vercel': 'https://vercel.com',
+            'Datadog': 'https://www.datadoghq.com',
+            'SigNoz': 'https://signoz.io',
+            'Prometheus': 'https://prometheus.io',
+            'Grafana': 'https://grafana.com',
+            'PostgreSQL': 'https://www.postgresql.org',
+            'MySQL': 'https://www.mysql.com',
+            'MongoDB': 'https://www.mongodb.com',
+            'Redis': 'https://redis.io',
+            'Arduino': 'https://www.arduino.cc',
+            'Raspberry Pi': 'https://www.raspberrypi.com',
+            'Proteus (Circuit Design)': 'https://www.labcenter.com',
+            'Network Design': 'https://www.cisco.com/site/us/en/solutions/networking/index.html',
+            'OpenWrt': 'https://openwrt.org',
+            'OPNsense': 'https://opnsense.org',
+            'Rust': 'https://www.rust-lang.org',
+            'Axum': 'https://github.com/tokio-rs/axum',
+            'Iced': 'https://iced.rs',
+            'Dioxus': 'https://dioxuslabs.com'
+        };
+
+        document.getElementById('skillsGrid').addEventListener('click', function(e) {
+            const card = e.target.closest('.skill-card.bento-card');
+            if (!card) return;
+            const name = card.querySelector('span:last-child').textContent.trim();
+            const url = skillUrls[name];
+            if (url) window.open(url, '_blank', 'noopener,noreferrer');
+        });
+
         window.onload = function() {
             initializeTheme();
         };
