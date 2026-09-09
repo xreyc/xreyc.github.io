@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reyco Seguma | Full Stack Software Engineer</title>
-    <meta name="description" content="Portfolio of Reyco Seguma, a full stack software engineer focused on distributed systems, cloud automation, microservices, and scalable product engineering.">
+    <meta name="description" content="Reyco Seguma — full stack software engineer building reliable product systems: backend services, event-driven workflows, cloud automation, and the interfaces on top. Creator of Maintainerd and Pebbles.">
     <meta name="author" content="Reyco Seguma">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0c1315">
+    <meta name="theme-color" content="#ffffff">
     <link rel="canonical" href="https://xreyc.github.io/">
     <link rel="icon" href="assets/favicon.ico" sizes="any">
     <link rel="shortcut icon" href="assets/favicon.ico">
@@ -18,17 +18,17 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Reyco Seguma">
     <meta property="og:title" content="Reyco Seguma | Full Stack Software Engineer">
-    <meta property="og:description" content="Full stack software engineer focused on distributed systems, cloud automation, microservices, and scalable product engineering.">
+    <meta property="og:description" content="Full stack software engineer building reliable product systems. Creator of Maintainerd and Pebbles.">
     <meta property="og:url" content="https://xreyc.github.io/">
     <meta property="og:image" content="https://xreyc.github.io/assets/profile.jpeg">
     <meta property="og:image:alt" content="Portrait of Reyco Seguma">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Reyco Seguma | Full Stack Software Engineer">
-    <meta name="twitter:description" content="Full stack software engineer focused on distributed systems, cloud automation, microservices, and scalable product engineering.">
+    <meta name="twitter:description" content="Full stack software engineer building reliable product systems. Creator of Maintainerd and Pebbles.">
     <meta name="twitter:image" content="https://xreyc.github.io/assets/profile.jpeg">
     <script type="application/ld+json">
         {
@@ -36,7 +36,7 @@
             "@type": "ProfilePage",
             "url": "https://xreyc.github.io/",
             "name": "Reyco Seguma | Full Stack Software Engineer",
-            "description": "Portfolio of Reyco Seguma, a full stack software engineer focused on distributed systems, cloud automation, microservices, and scalable product engineering.",
+            "description": "Portfolio of Reyco Seguma, a full stack software engineer building reliable product systems across backend, cloud, and frontend. Creator of Maintainerd and Pebbles.",
             "mainEntity": {
                 "@type": "Person",
                 "name": "Reyco Seguma",
@@ -44,6 +44,7 @@
                 "image": "https://xreyc.github.io/assets/profile.jpeg",
                 "jobTitle": "Full Stack Software Engineer",
                 "email": "mailto:segumareyco@gmail.com",
+                "address": { "@type": "PostalAddress", "addressLocality": "Manila", "addressCountry": "PH" },
                 "sameAs": [
                     "https://github.com/xreyc",
                     "https://linkedin.com/in/reyco-seguma"
@@ -55,2015 +56,689 @@
                     "Cloud automation",
                     "Serverless architecture",
                     "Product engineering",
-                    "AI-assisted development",
-                    "Local LLM tooling"
+                    "Rust",
+                    "GPU-accelerated UI"
                 ]
             }
         }
     </script>
     <style>
         :root {
-            color-scheme: dark;
-            --paper: #f2f3f0;
-            --paper-soft: #e2e4e0;
-            --desk: #1a2024;
-            --ink: #151814;
-            --muted: #646862;
-            --line: #81857d;
-            --grain: rgba(21, 24, 20, 0.045);
+            --bg: #ffffff;
+            --bg-soft: #f7f8fa;
+            --bg-tint: #f1f5fb;
+            --surface: #ffffff;
+            --text: #0f172a;
+            --text-soft: #334155;
+            --muted: #64748b;
+            --line: #e2e8f0;
+            --line-strong: #cbd5e1;
             --accent: #1d4f8f;
-            --accent-bright: #5fb6ca;
-            --stamp: #84261f;
-            --focus: #3f9fb6;
-            --chrome-text: #d3dade;
-            --chrome-muted: #929ca1;
-            --sheet-width: 1040px;
-            --label-column: 150px;
+            --accent-strong: #163d6f;
+            --accent-soft: #eaf1fa;
+            --stamp: #b4453a;
+
+            /* blueprint / architecture-diagram tokens (consumed by the .bp-* SVG classes) */
+            --paper: #f8fafc;
+            --ink: #0f172a;
+
+            --sheet: 1080px;
+            --radius: 14px;
+            --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.06);
+            --shadow-md: 0 6px 24px rgba(15, 23, 42, 0.07), 0 2px 6px rgba(15, 23, 42, 0.05);
         }
 
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
             margin: 0;
-            padding-bottom: 46px;
-            background:
-                radial-gradient(1100px 520px at 50% -80px, rgba(86, 102, 112, 0.22) 0%, transparent 70%),
-                linear-gradient(180deg, #1f252a 0%, #191e23 55%, #12161a 100%),
-                var(--desk);
-            color: var(--ink);
-            font-family: "Courier Prime", "Courier New", Courier, monospace;
-            font-size: 15px;
-            line-height: 1.56;
+            background: var(--bg);
+            color: var(--text);
+            font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
             text-rendering: optimizeLegibility;
         }
 
-        body::after {
-            content: "";
-            position: fixed;
-            inset: 0;
-            z-index: 60;
-            pointer-events: none;
-            background: repeating-linear-gradient(0deg, rgba(7, 11, 13, 0.03) 0 1px, transparent 1px 3px);
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { color: var(--accent-strong); text-decoration: underline; text-underline-offset: 3px; }
+        a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+        h1, h2, h3, h4, p { margin: 0; }
+
+        .wrap {
+            width: calc(100% - 48px);
+            max-width: var(--sheet);
+            margin: 0 auto;
         }
 
-        .system-strip {
+        .mono {
+            font-family: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+        }
+
+        /* ---------- header ---------- */
+        .site-header {
             position: sticky;
             top: 0;
-            z-index: 35;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: saturate(160%) blur(10px);
+            border-bottom: 1px solid var(--line);
+        }
+        .site-header__inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 18px;
-            height: 26px;
-            padding: 0 14px;
-            background: #0c1315;
-            border-bottom: 1px solid rgba(95, 182, 202, 0.22);
-            color: var(--chrome-muted);
-            font-size: 0.62rem;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            white-space: nowrap;
+            gap: 24px;
+            height: 64px;
         }
-
-        .system-strip__seg--mid {
-            overflow: hidden;
-            color: #7e8a92;
-            text-overflow: ellipsis;
-        }
-
-        .system-bar {
-            position: fixed;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 35;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 18px;
-            height: 34px;
-            padding: 0 14px;
-            background: rgba(9, 14, 16, 0.96);
-            border-top: 1px solid rgba(95, 182, 202, 0.24);
-            backdrop-filter: blur(4px);
-            color: var(--chrome-muted);
-            font-size: 0.64rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            white-space: nowrap;
-        }
-
-        .system-bar__info {
-            display: flex;
-            gap: 18px;
-            min-width: 0;
-            overflow: hidden;
-        }
-
-        .system-bar__item {
+        .brand {
             display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .system-bar__item strong {
-            color: var(--chrome-text);
+            align-items: baseline;
+            gap: 9px;
             font-weight: 700;
+            font-size: 1.02rem;
+            color: var(--text);
         }
-
-        .system-bar__dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: var(--accent-bright);
-            box-shadow: 0 0 6px rgba(95, 182, 202, 0.8);
-            animation: link-pulse 1.6s ease-in-out infinite;
+        .brand:hover { text-decoration: none; color: var(--text); }
+        .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); transform: translateY(-1px); }
+        .nav { display: flex; align-items: center; gap: 28px; }
+        .nav a {
+            color: var(--text-soft);
+            font-size: 0.92rem;
+            font-weight: 500;
         }
-
-        .system-bar__zoom {
+        .nav a:hover { color: var(--accent); text-decoration: none; }
+        .btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            flex-shrink: 0;
-        }
-
-        .system-bar__zoom strong {
-            min-width: 4ch;
-            color: var(--chrome-text);
-            text-align: right;
-        }
-
-        .system-bar__zoom input {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 110px;
-            height: 3px;
-            margin: 0;
-            background: rgba(95, 182, 202, 0.3);
+            padding: 9px 16px;
+            border-radius: 9px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid transparent;
             cursor: pointer;
+            transition: background .15s ease, border-color .15s ease, color .15s ease, transform .05s ease;
         }
+        .btn:hover { text-decoration: none; }
+        .btn:active { transform: translateY(1px); }
+        .btn--primary { background: var(--accent); color: #fff; }
+        .btn--primary:hover { background: var(--accent-strong); color: #fff; }
+        .btn--ghost { background: var(--surface); color: var(--text); border-color: var(--line-strong); }
+        .btn--ghost:hover { border-color: var(--accent); color: var(--accent); }
+        .header-cta { display: inline-flex; }
 
-        .system-bar__zoom input::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 11px;
-            height: 11px;
-            border: 0;
-            border-radius: 1px;
-            background: var(--accent-bright);
+        /* ---------- hero ---------- */
+        .hero { padding: 84px 0 40px; }
+        .hero__grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 300px;
+            gap: 56px;
+            align-items: center;
         }
-
-        .system-bar__zoom input::-moz-range-thumb {
-            width: 11px;
-            height: 11px;
-            border: 0;
-            border-radius: 1px;
-            background: var(--accent-bright);
-        }
-
-        @keyframes link-pulse {
-            50% {
-                opacity: 0.35;
-            }
-        }
-
-        a {
-            color: inherit;
-            text-decoration-thickness: 1px;
-            text-underline-offset: 0.22em;
-        }
-
-        a:hover {
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
             color: var(--accent);
         }
-
-        a:focus-visible,
-        button:focus-visible {
-            outline: 2px solid var(--focus);
-            outline-offset: 4px;
+        .eyebrow::before {
+            content: "";
+            width: 22px; height: 1px;
+            background: var(--accent);
         }
-
-        .page {
-            width: calc(100% - 24px);
-            max-width: var(--sheet-width);
-            margin: 0 auto;
-            padding: 18px 0 32px;
+        .hero h1 {
+            margin: 18px 0 8px;
+            font-size: clamp(2.4rem, 5.4vw, 3.85rem);
+            line-height: 1.04;
+            letter-spacing: -0.02em;
+            font-weight: 800;
         }
-
-        .site-header {
-            position: sticky;
-            top: 26px;
-            z-index: 10;
-            margin: 0 auto;
-            padding: 14px 0;
-            background: rgba(15, 20, 23, 0.93);
-            border-bottom: 1px solid rgba(95, 182, 202, 0.24);
-            box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35);
-            backdrop-filter: blur(4px);
+        .hero__role {
+            font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+            font-weight: 600;
+            color: var(--text-soft);
         }
-
-        .site-header__inner {
-            width: calc(100% - 24px);
-            max-width: var(--sheet-width);
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 24px;
+        .hero__role b { color: var(--accent); font-weight: 600; }
+        .hero__intro {
+            margin: 20px 0 0;
+            max-width: 56ch;
+            font-size: 1.05rem;
+            color: var(--text-soft);
         }
-
-        .mark {
-            font-family: "Courier Prime", "Courier New", Courier, monospace;
-            font-weight: 700;
-            letter-spacing: 0;
-            text-decoration: none;
-            white-space: nowrap;
-            color: var(--chrome-text);
-        }
-
-        .mark:hover {
-            color: var(--accent-bright);
-        }
-
-        .mark::before {
-            content: "ACCESS// ";
-            color: var(--accent-bright);
-        }
-
-        .download-record {
-            padding: 8px 11px;
-            border: 1px solid rgba(95, 182, 202, 0.45);
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--chrome-text);
-            font: inherit;
-            font-size: 0.78rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            cursor: pointer;
-        }
-
-        .download-record::before {
-            content: "SAVE// ";
-            color: var(--accent-bright);
-        }
-
-        .download-record:hover {
-            border-color: #c96a5e;
-            background: rgba(255, 255, 255, 0.12);
-            color: #f2f4ee;
-        }
-
-        .file-tabs {
+        .hero__meta {
             display: flex;
             flex-wrap: wrap;
-            gap: 0;
-            margin-bottom: 10px;
-            border-left: 1px solid rgba(95, 182, 202, 0.3);
+            gap: 10px 18px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: var(--muted);
         }
-
-        .file-tab {
-            min-width: 150px;
-            padding: 9px 12px;
-            border: 1px solid rgba(95, 182, 202, 0.3);
-            border-left: 0;
-            background: rgba(10, 15, 17, 0.92);
-            color: var(--chrome-muted);
-            font: inherit;
-            font-size: 0.78rem;
-            font-weight: 700;
-            text-align: left;
-            text-transform: uppercase;
-            cursor: pointer;
-        }
-
-        .file-tab::before {
-            content: "▸ ";
-            color: rgba(95, 182, 202, 0.4);
-        }
-
-        .file-tab:hover {
-            background: rgba(95, 182, 202, 0.1);
-            color: var(--chrome-text);
-        }
-
-        .file-tab[aria-selected="true"] {
-            position: relative;
-            background: rgba(95, 182, 202, 0.16);
-            color: #eaf6f8;
-        }
-
-        .file-tab[aria-selected="true"]::before {
-            content: "▸ ";
-            color: var(--accent-bright);
-        }
-
-        .file-tab[aria-selected="true"]::after {
-            content: "";
-            position: absolute;
-            top: -1px;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: var(--accent-bright);
-        }
-
-        .classified-loader {
-            position: fixed;
-            inset: 0;
-            z-index: 30;
-            display: grid;
-            place-items: center;
-            padding: 24px;
-            background: rgba(5, 8, 8, 0.88);
-            backdrop-filter: blur(2px);
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 180ms ease;
-        }
-
-        .classified-loader.is-active {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .loader-card {
-            position: relative;
-            width: min(420px, 100%);
-            padding: 18px 18px 21px;
-            overflow: hidden;
-            border: 1px solid rgba(210, 74, 62, 0.55);
-            background: #0a1013;
-            box-shadow:
-                0 0 0 1px rgba(95, 182, 202, 0.1) inset,
-                0 0 34px rgba(95, 182, 202, 0.06) inset,
-                0 22px 55px rgba(0, 0, 0, 0.65);
-            color: #c9dcd7;
-            text-transform: uppercase;
-        }
-
-        .loader-card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, transparent, rgba(95, 182, 202, 0.09), transparent);
-            animation: clearance-scan 820ms linear infinite;
-        }
-
-        .loader-card::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 34%;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--accent-bright), transparent);
-            animation: decrypt-progress 1.05s linear infinite;
-        }
-
-        .loader-title {
-            position: relative;
-            display: block;
-            margin-bottom: 8px;
-            color: #e0574a;
-            font-weight: 700;
-        }
-
-        .loader-title::before {
-            content: "▮ ";
-            animation: cursor-blink 900ms step-end infinite;
-        }
-
-        .loader-text {
-            position: relative;
-            display: block;
-            color: #d7e6e2;
-            font-size: 0.84rem;
-        }
-
-        .loader-text::after {
-            content: "▌";
-            margin-left: 2px;
-            color: var(--accent-bright);
-            animation: cursor-blink 700ms step-end infinite;
-        }
-
-        .loader-status {
-            position: relative;
-            display: block;
-            margin-top: 10px;
-            padding-top: 8px;
-            border-top: 1px solid rgba(95, 182, 202, 0.26);
-            color: #7f938e;
-            font-size: 0.72rem;
-        }
-
-        .classified-panel[hidden] {
-            display: none;
-        }
-
-        .classified-panel.is-active {
-            animation: file-reveal 260ms ease both;
-        }
-
-        .hero {
-            position: relative;
-            display: block;
-        }
-
-        .classification-strip {
+        .hero__meta span { display: inline-flex; align-items: center; gap: 7px; }
+        .hero__meta svg { width: 15px; height: 15px; color: var(--accent); }
+        .hero__actions {
             display: flex;
-            justify-content: space-between;
-            gap: 14px;
-            margin-bottom: 14px;
-            padding: 6px 9px;
-            border-top: 2px solid var(--stamp);
-            border-bottom: 2px solid var(--stamp);
-            color: var(--stamp);
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-transform: uppercase;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
         }
-
-        .record-stamp {
-            position: absolute;
-            top: 78px;
-            right: 18px;
-            z-index: 1;
-            padding: 6px 12px;
-            border: 2px solid var(--stamp);
-            color: var(--stamp);
-            font-size: clamp(1.1rem, 2.3vw, 1.8rem);
-            font-weight: 700;
-            line-height: 1;
-            text-transform: uppercase;
-            transform: rotate(-7deg);
-            opacity: 0.72;
-            pointer-events: none;
-        }
-
-        .eyebrow,
-        .section-label,
-        .meta {
-            color: var(--muted);
-            font-size: 0.82rem;
-        }
-
-        .eyebrow {
-            display: block;
-            margin-bottom: 18px;
-        }
-
-        .form-header {
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) auto;
-            gap: 18px;
-            align-items: start;
-            padding-bottom: 14px;
-            border-bottom: 2px solid var(--ink);
-            text-transform: uppercase;
-        }
-
-        .form-title {
+        .portrait {
             margin: 0;
-            font-size: clamp(1.28rem, 2.4vw, 1.72rem);
-            line-height: 1.15;
-            font-weight: 700;
+            position: relative;
+        }
+        .portrait img {
+            width: 100%;
+            aspect-ratio: 1 / 1.12;
+            object-fit: cover;
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow-md);
+            filter: grayscale(0.35) contrast(1.02);
+            transition: filter .35s ease;
+        }
+        .portrait:hover img { filter: grayscale(0); }
+        .portrait::after {
+            content: "";
+            position: absolute;
+            inset: 14px -14px -14px 14px;
+            border-radius: var(--radius);
+            border: 1px solid var(--accent-soft);
+            background: linear-gradient(135deg, var(--accent-soft), transparent 60%);
+            z-index: -1;
         }
 
-        .redacted {
-            display: inline-block;
-            width: 11ch;
-            height: 0.78em;
-            margin: 0 0.35ch;
-            background: var(--ink);
-            vertical-align: -0.08em;
-        }
-
-        .form-subtitle,
-        .form-number,
-        .field-label {
-            color: var(--muted);
-            font-size: 0.72rem;
-            letter-spacing: 0;
-        }
-
-        .form-number {
-            min-width: 116px;
-            padding: 8px 10px;
-            border: 1px solid var(--ink);
-            text-align: center;
-        }
-
-        .file-metadata {
+        .stats {
             display: grid;
             grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 0;
-            margin-top: 12px;
-            border-top: 1px solid var(--ink);
-            border-left: 1px solid var(--ink);
+            margin-top: 56px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: var(--bg-soft);
+        }
+        .stats div {
+            padding: 20px 22px;
+            border-right: 1px solid var(--line);
+        }
+        .stats div:last-child { border-right: 0; }
+        .stats dt { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.01em; }
+        .stats dd { margin: 4px 0 0; font-size: 0.86rem; color: var(--muted); }
+
+        /* ---------- sections ---------- */
+        section.block { padding: 58px 0; }
+        section.block + section.block { border-top: 1px solid var(--line); }
+        .section-head { margin-bottom: 34px; }
+        .section-head h2 {
+            margin: 12px 0 0;
+            font-size: clamp(1.7rem, 3vw, 2.2rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        .section-head p {
+            margin: 12px 0 0;
+            max-width: 62ch;
+            color: var(--text-soft);
         }
 
-        .file-metadata span {
-            min-width: 0;
-            padding: 6px 8px;
-            border-right: 1px solid var(--ink);
-            border-bottom: 1px solid var(--ink);
-            color: var(--muted);
-            font-size: 0.68rem;
-            text-transform: uppercase;
-        }
-
-        .file-metadata strong {
-            color: var(--ink);
-            font-weight: 700;
-        }
-
-        .form-body {
-            display: block;
-            padding-top: 20px;
-        }
-
-        .field-grid {
+        /* ---------- project cards ---------- */
+        .cards { display: grid; gap: 22px; }
+        .card {
             display: grid;
-            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 240px;
-            border-top: 1px solid var(--ink);
-            border-left: 1px solid var(--ink);
+            grid-template-columns: 210px minmax(0, 1fr);
+            gap: 28px;
+            padding: 28px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
         }
-
-        .field {
-            min-height: 68px;
-            padding: 9px 11px;
-            border-right: 1px solid var(--ink);
-            border-bottom: 1px solid var(--ink);
-        }
-
-        .field-wide {
-            grid-column: 1 / -1;
-        }
-
-        .name-field {
-            grid-column: 1 / span 2;
-            grid-row: 1;
-        }
-
-        .photo-field {
-            grid-column: 3;
-            grid-row: 1 / span 2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .experience-field,
-        .delivery-field {
-            grid-column: 1 / span 2;
-        }
-
-        .role-field {
-            grid-column: 1;
-            grid-row: 2;
-        }
-
-        .strength-field,
-        .style-field {
-            grid-column: 3;
-        }
-
-        .location-field {
-            grid-column: 2;
-            grid-row: 2;
-        }
-
-        .form-body .field-grid + .field-grid {
-            border-top: 0;
-        }
-
-        .contact-field-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .statement-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .statement-grid > .summary-field {
-            grid-column: 1 / -1;
-        }
-
-        .contact-field-grid .field-value {
-            overflow-wrap: anywhere;
-        }
-
-        .field-label {
-            display: block;
-            margin-bottom: 5px;
+        .card:hover { border-color: var(--line-strong); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+        .card__aside { border-right: 1px solid var(--line); padding-right: 24px; }
+        .card__tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent-strong);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
             text-transform: uppercase;
         }
-
-        .field-value {
-            display: block;
-            font-size: 0.96rem;
-            line-height: 1.35;
-            font-weight: 700;
+        .card h3 { margin-top: 14px; font-size: 1.32rem; font-weight: 700; letter-spacing: -0.01em; }
+        .card__year { margin-top: 6px; font-size: 0.84rem; color: var(--muted); }
+        .card__body p { color: var(--text-soft); }
+        .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+        .chip {
+            padding: 4px 11px;
+            border-radius: 7px;
+            background: var(--bg-soft);
+            border: 1px solid var(--line);
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--text-soft);
         }
-
-        .field .typed-line {
-            width: auto;
-            margin-bottom: 0;
-            overflow: visible;
-            border-right: 0;
-            white-space: normal;
-            animation: none;
+        .card__links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 18px; }
+        .card__links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.88rem;
+            font-weight: 600;
         }
+        .card__links a svg { width: 14px; height: 14px; }
+        .card__note { margin-top: 18px; font-size: 0.84rem; color: var(--muted); }
 
-        .name-field .field-value {
-            font-size: clamp(2rem, 5vw, 3.15rem);
-            line-height: 1;
-        }
-
-        .summary-field {
-            min-height: 126px;
-        }
-
-        h1,
-        h2,
-        h3,
-        p {
-            margin-top: 0;
-        }
-
-        h1 {
-            font-family: "Courier Prime", "Courier New", Courier, monospace;
-            max-width: 13ch;
-            margin-bottom: 14px;
-            font-size: clamp(3rem, 8vw, 5.8rem);
-            line-height: 1.02;
-            font-weight: 700;
-            letter-spacing: 0;
-        }
-
-        .typed-line {
-            font-family: "Courier Prime", "Courier New", Courier, monospace;
-            font-weight: 700;
-            width: max-content;
-            max-width: 100%;
-            margin-bottom: 24px;
+        /* ---------- architecture ---------- */
+        .arch-grid { display: grid; gap: 26px; }
+        .arch-card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
             overflow: hidden;
-            border-right: 2px solid var(--ink);
-            white-space: nowrap;
-            font-size: 1rem;
-            animation: typing 2.2s steps(31, end), caret 1s step-end infinite;
         }
-
-        .intro {
-            max-width: none;
-            margin-bottom: 0;
-            font-size: 0.96rem;
+        .arch-card__head {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 22px 26px 0;
         }
-
-        .facts {
+        .arch-card__head h3 { font-size: 1.2rem; font-weight: 700; }
+        .arch-card__head .mono { font-size: 0.76rem; color: var(--muted); letter-spacing: 0.06em; }
+        .arch-card__copy { padding: 10px 26px 4px; color: var(--text-soft); max-width: 80ch; }
+        .arch-sheet {
+            margin: 14px 26px 0;
+            padding: 16px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background:
+                repeating-linear-gradient(0deg, rgba(29, 79, 143, 0.045) 0 1px, transparent 1px 26px),
+                repeating-linear-gradient(90deg, rgba(29, 79, 143, 0.045) 0 1px, transparent 1px 26px),
+                var(--bg-soft);
+        }
+        .blueprint { display: block; width: 100%; height: auto; }
+        .arch-notes {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 18px;
+            gap: 0;
             margin: 0;
-            padding: 18px 0 0;
-            border-top: 1px solid var(--line);
-        }
-
-        .facts div {
-            min-width: 0;
-        }
-
-        .facts dt {
-            margin-bottom: 4px;
-            color: var(--muted);
-            font-size: 0.76rem;
-        }
-
-        .facts dd {
-            margin: 0;
-            font-weight: 700;
-        }
-
-        .portrait {
-            margin: 0;
-            padding: 0;
-            border: 0;
-        }
-
-        .portrait img {
-            width: 100%;
-            height: 100%;
-            min-height: 104px;
-            display: block;
-            object-fit: cover;
-            border: 0;
-            filter: grayscale(1) contrast(1.08);
-        }
-
-        .portrait figcaption {
-            display: none;
-        }
-
-        .paper-page {
-            position: relative;
-            padding: 7mm;
-            background:
-                radial-gradient(circle at 12% 18%, rgba(132, 38, 31, 0.022) 0 1px, transparent 44px),
-                radial-gradient(circle at 86% 14%, rgba(68, 71, 64, 0.028) 0 1px, transparent 58px),
-                radial-gradient(circle at 72% 84%, rgba(68, 71, 64, 0.026) 0 1px, transparent 62px),
-                radial-gradient(circle at 14px 22px, rgba(21, 24, 20, 0.032) 0 0.8px, transparent 1px),
-                radial-gradient(circle at 78px 56px, rgba(21, 24, 20, 0.022) 0 0.7px, transparent 1px),
-                linear-gradient(180deg, rgba(68, 71, 64, 0.024), transparent 9%, transparent 91%, rgba(68, 71, 64, 0.034)),
-                repeating-linear-gradient(0deg, rgba(72, 100, 138, 0.075) 0 1px, transparent 1px 22px),
-                repeating-linear-gradient(90deg, rgba(72, 100, 138, 0.075) 0 1px, transparent 1px 22px),
-                linear-gradient(105deg, #f8f9f7 0%, var(--paper) 54%, var(--paper-soft) 100%);
-            background-size: 100% 100%, 100% 100%, 100% 100%, 96px 96px, 132px 132px, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
-            border: 0;
-            box-shadow:
-                0 1px 0 rgba(255, 255, 255, 0.55) inset,
-                0 0 0 1px rgba(46, 54, 52, 0.16) inset,
-                0 10px 24px rgba(0, 0, 0, 0.4),
-                0 30px 64px rgba(0, 0, 0, 0.45);
-            scroll-margin-top: 84px;
-        }
-
-        .paper-page::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            background:
-                linear-gradient(90deg, rgba(68, 71, 64, 0.036), transparent 9%, transparent 91%, rgba(68, 71, 64, 0.032)),
-                linear-gradient(180deg, rgba(255, 255, 255, 0.52), transparent 16%),
-                repeating-linear-gradient(90deg, transparent 0 2px, rgba(21, 24, 20, 0.012) 2px 3px, transparent 3px 7px);
-            mix-blend-mode: multiply;
-            opacity: 0.54;
-        }
-
-        .paper-page > * {
-            position: relative;
-        }
-
-        section {
-            margin: 0;
-            padding: 0;
-            scroll-margin-top: 84px;
-        }
-
-        section + section {
-            margin-top: 16px;
-            padding-top: 0;
-            border-top: 0;
-        }
-
-        section:not(.hero) {
-            display: grid;
-            grid-template-columns: var(--label-column) minmax(0, 1fr);
-            border-top: 1px solid var(--ink);
-            border-left: 1px solid var(--ink);
-        }
-
-        .section-heading {
-            display: contents;
-            margin-bottom: 0;
-        }
-
-        .section-heading > * {
-            min-height: 54px;
-            padding: 11px 12px;
-            border-right: 1px solid var(--ink);
-            border-bottom: 1px solid var(--ink);
-        }
-
-        h2 {
-            font-family: "Courier Prime", "Courier New", Courier, monospace;
-            margin-bottom: 0;
-            font-size: clamp(1.22rem, 2vw, 1.5rem);
-            line-height: 1.2;
-            font-weight: 700;
-        }
-
-        .section-label::before {
-            content: "[";
-        }
-
-        .section-label::after {
-            content: "]";
-        }
-
-        .entry {
-            display: contents;
-            padding: 0;
-        }
-
-        h3 {
-            font-family: "Courier Prime", "Courier New", Courier, monospace;
-            font-weight: 700;
-            margin-bottom: 8px;
-            font-size: 0.98rem;
-            line-height: 1.35;
-        }
-
-        .entry p {
-            margin-bottom: 12px;
-            color: var(--ink);
-        }
-
-        .entry > * {
-            padding: 13px 12px;
-            border-right: 1px solid var(--ink);
-            border-bottom: 1px solid var(--ink);
-        }
-
-        .entry .meta {
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        .list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px 14px;
-            margin: 14px 0 0;
-            padding: 0;
+            padding: 20px 26px 26px;
             list-style: none;
+        }
+        .arch-notes li {
+            padding: 0 18px;
+            border-left: 2px solid var(--accent-soft);
             color: var(--muted);
             font-size: 0.86rem;
         }
-
-        .list li::before {
-            content: "+ ";
-            color: var(--accent);
-        }
-
-        .project-summary {
-            max-width: 76ch;
-            margin-bottom: 12px;
-        }
-
-        .project-details {
-            display: grid;
-            margin: 12px 0 0;
-            padding: 0;
-            border-top: 1px solid var(--ink);
-            border-left: 1px solid var(--ink);
-            background: rgba(255, 255, 255, 0.34);
-        }
-
-        .project-details div {
-            display: grid;
-            grid-template-columns: 116px minmax(0, 1fr);
-        }
-
-        .project-details dt,
-        .project-details dd {
-            min-width: 0;
-            padding: 8px 10px;
-            border-right: 1px solid var(--ink);
-            border-bottom: 1px solid var(--ink);
-        }
-
-        .project-details dt {
-            margin: 0;
-            color: var(--muted);
-            font-size: 0.72rem;
-            text-transform: uppercase;
-        }
-
-        .project-details dd {
-            margin: 0;
-            color: var(--ink);
-            font-size: 0.92rem;
-        }
-
-        .project-details a + a::before {
-            content: " / ";
-            color: var(--muted);
-        }
-
-        .architecture-entry > div {
-            padding: 0;
-        }
-
-        .architecture-copy {
-            padding: 13px 12px 0;
-        }
-
-        .architecture-sheet {
-            position: relative;
-            margin: 14px 12px 16px;
-            padding: 12px;
-            overflow: hidden;
-            border: 1px solid var(--ink);
-            background:
-                radial-gradient(circle at 18px 16px, rgba(21, 19, 14, 0.06) 0 0.7px, transparent 1px),
-                repeating-linear-gradient(0deg, rgba(21, 19, 14, 0.024) 0 1px, transparent 1px 34px),
-                repeating-linear-gradient(90deg, rgba(21, 19, 14, 0.018) 0 1px, transparent 1px 34px),
-                linear-gradient(105deg, rgba(255, 255, 255, 0.5), rgba(218, 222, 218, 0.72));
-            background-size: 92px 92px, 100% 100%, 100% 100%, 100% 100%;
-        }
-
-        .architecture-sheet::after {
-            content: "CONTROLLED SCHEMATIC";
-            position: absolute;
-            right: 14px;
-            bottom: 10px;
-            color: rgba(127, 33, 29, 0.36);
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0;
-            transform: rotate(-2deg);
-            pointer-events: none;
-        }
-
-        .blueprint {
+        .arch-notes li:first-child { padding-left: 0; border-left: 0; }
+        .arch-notes strong {
             display: block;
-            width: 100%;
-            height: auto;
-            margin-top: 4px;
+            margin-bottom: 4px;
+            color: var(--text);
+            font-size: 0.9rem;
         }
 
-        .blueprint .bp-frame {
-            fill: none;
-            stroke: var(--accent);
-            stroke-width: 1.1;
-            opacity: 0.7;
-        }
+        /* blueprint SVG classes (professional restyle of the original diagram tokens) */
+        .blueprint .bp-frame { fill: none; stroke: var(--line-strong); stroke-width: 1; opacity: 0.9; }
+        .blueprint .bp-frame--inner { stroke-width: 0.6; opacity: 0.5; }
+        .blueprint .bp-coord { fill: var(--muted); font-size: 8.5px; }
+        .blueprint .bp-zone { fill: rgba(29, 79, 143, 0.03); stroke: var(--accent); stroke-width: 1; stroke-dasharray: 8 5; opacity: 0.8; }
+        .blueprint .bp-zone-label { fill: var(--accent); font-size: 9.5px; font-weight: 700; letter-spacing: 0.1em; }
+        .blueprint .bp-node { fill: var(--paper); stroke: var(--accent); stroke-width: 1.3; }
+        .blueprint .bp-node--red { stroke: var(--stamp); }
+        .blueprint .bp-node--plain { stroke-width: 0.9; opacity: 0.9; }
+        .blueprint .bp-t { fill: var(--ink); font-size: 11.5px; font-weight: 700; }
+        .blueprint .bp-s { fill: var(--muted); font-size: 8.8px; }
+        .blueprint .bp-k { fill: var(--accent); font-size: 8.2px; font-weight: 700; letter-spacing: 0.08em; }
+        .blueprint .bp-edge-label { fill: var(--accent); font-size: 8.6px; }
+        .blueprint .bp-edge-label--red { fill: var(--stamp); }
+        .blueprint .bp-flow { fill: none; stroke: var(--accent); stroke-width: 1.4; }
+        .blueprint .bp-flow--async { stroke-dasharray: 7 4; }
+        .blueprint .bp-flow--red { stroke: var(--stamp); }
+        .blueprint .bp-flow--tel { stroke-width: 0.9; stroke-dasharray: 2 3; opacity: 0.6; }
+        .blueprint .bp-step { fill: #fff; stroke: var(--accent); stroke-width: 1.3; }
+        .blueprint .bp-step-n { fill: var(--accent); font-size: 10.5px; font-weight: 700; text-anchor: middle; }
+        .blueprint .bp-tb rect { fill: rgba(255, 255, 255, 0.7); stroke: var(--line-strong); stroke-width: 1; }
+        .blueprint .bp-tb line { stroke: var(--line-strong); stroke-width: 0.8; opacity: 0.8; }
+        .blueprint .bp-tb-label { fill: var(--muted); font-size: 7.6px; letter-spacing: 0.08em; }
+        .blueprint .bp-tb-value { fill: var(--ink); font-size: 9.5px; font-weight: 700; }
+        .blueprint .bp-tb-red { fill: var(--accent); }
 
-        .blueprint .bp-frame--inner {
-            stroke-width: 0.6;
-            opacity: 0.4;
+        /* ---------- timeline / experience ---------- */
+        .timeline { display: grid; gap: 0; }
+        .job {
+            display: grid;
+            grid-template-columns: 190px minmax(0, 1fr);
+            gap: 32px;
+            padding: 26px 0;
+            border-top: 1px solid var(--line);
         }
+        .job:first-child { border-top: 0; }
+        .job__period { font-size: 0.86rem; color: var(--muted); font-weight: 500; }
+        .job__period .mono { display: block; margin-top: 6px; font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent); }
+        .job h3 { font-size: 1.14rem; font-weight: 700; }
+        .job h3 span { color: var(--muted); font-weight: 500; }
+        .job p { margin-top: 8px; color: var(--text-soft); }
 
-        .blueprint .bp-coord {
-            fill: var(--muted);
-            font-size: 8.5px;
+        /* ---------- education + skills ---------- */
+        .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 48px; }
+        .edu-card {
+            padding: 24px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--bg-soft);
         }
-
-        .blueprint .bp-zone {
-            fill: rgba(29, 79, 143, 0.02);
-            stroke: var(--accent);
-            stroke-width: 1;
-            stroke-dasharray: 9 5;
-            opacity: 0.85;
+        .edu-card h3 { font-size: 1.08rem; font-weight: 700; }
+        .edu-card .job__period { margin-top: 6px; }
+        .edu-card p { margin-top: 12px; color: var(--text-soft); font-size: 0.94rem; }
+        .skills { display: grid; gap: 18px; }
+        .skill-row {
+            display: grid;
+            grid-template-columns: 170px minmax(0, 1fr);
+            gap: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--line);
         }
+        .skill-row:last-child { border-bottom: 0; padding-bottom: 0; }
+        .skill-row dt { font-weight: 700; font-size: 0.95rem; }
+        .skill-row dd { margin: 0; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 
-        .blueprint .bp-zone-label {
-            fill: var(--accent);
-            font-size: 9.5px;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-        }
-
-        .blueprint .bp-node {
-            fill: var(--paper);
-            stroke: var(--accent);
-            stroke-width: 1.3;
-        }
-
-        .blueprint .bp-node--red {
-            stroke: var(--stamp);
-        }
-
-        .blueprint .bp-node--plain {
-            stroke-width: 0.9;
-            opacity: 0.9;
-        }
-
-        .blueprint .bp-t {
-            fill: var(--ink);
-            font-size: 11.5px;
-            font-weight: 700;
-        }
-
-        .blueprint .bp-s {
-            fill: var(--muted);
-            font-size: 8.8px;
-        }
-
-        .blueprint .bp-k {
-            fill: var(--accent);
-            font-size: 8.2px;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-        }
-
-        .blueprint .bp-edge-label {
-            fill: var(--accent);
-            font-size: 8.6px;
-        }
-
-        .blueprint .bp-edge-label--red {
-            fill: var(--stamp);
-        }
-
-        .blueprint .bp-flow {
-            fill: none;
-            stroke: var(--accent);
-            stroke-width: 1.4;
-        }
-
-        .blueprint .bp-flow--async {
-            stroke-dasharray: 7 4;
-        }
-
-        .blueprint .bp-flow--red {
-            stroke: var(--stamp);
-        }
-
-        .blueprint .bp-flow--tel {
-            stroke-width: 0.9;
-            stroke-dasharray: 2 3;
-            opacity: 0.65;
-        }
-
-        .blueprint .bp-step {
-            fill: var(--paper);
-            stroke: var(--stamp);
-            stroke-width: 1.3;
-        }
-
-        .blueprint .bp-step-n {
-            fill: var(--stamp);
-            font-size: 10.5px;
-            font-weight: 700;
-            text-anchor: middle;
-        }
-
-        .blueprint .bp-tb rect {
-            fill: rgba(255, 255, 255, 0.4);
-            stroke: var(--accent);
-            stroke-width: 1;
-        }
-
-        .blueprint .bp-tb line {
-            stroke: var(--accent);
-            stroke-width: 0.8;
-            opacity: 0.7;
-        }
-
-        .blueprint .bp-tb-label {
-            fill: var(--muted);
-            font-size: 7.6px;
-            letter-spacing: 0.1em;
-        }
-
-        .blueprint .bp-tb-value {
-            fill: var(--ink);
-            font-size: 9.5px;
-            font-weight: 700;
-        }
-
-        .blueprint .bp-tb-red {
-            fill: var(--stamp);
-        }
-
-        .architecture-titlebar {
+        /* ---------- contact ---------- */
+        .contact-block {
             display: grid;
             grid-template-columns: minmax(0, 1fr) auto;
+            gap: 32px;
+            align-items: center;
+            padding: 40px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: linear-gradient(135deg, var(--accent-soft), var(--bg-soft));
+        }
+        .contact-block h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 800; letter-spacing: -0.02em; }
+        .contact-block p { margin-top: 10px; color: var(--text-soft); max-width: 46ch; }
+        .contact-actions { display: flex; flex-direction: column; gap: 12px; min-width: 230px; }
+        .contact-actions a {
+            display: flex;
+            align-items: center;
             gap: 12px;
-            align-items: center;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--ink);
-            text-transform: uppercase;
+            padding: 13px 16px;
+            border-radius: 10px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            color: var(--text);
+            font-weight: 600;
+            font-size: 0.92rem;
         }
+        .contact-actions a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+        .contact-actions svg { width: 18px; height: 18px; color: var(--accent); flex: none; }
 
-        .architecture-titlebar span,
-        .node-kicker {
-            color: var(--muted);
-            font-size: 0.68rem;
-        }
-
-        .architecture-titlebar strong {
-            font-size: 0.95rem;
-        }
-
-        .flow-strip {
-            display: grid;
-            grid-template-columns: minmax(0, 1.05fr) 26px minmax(0, 1fr) 26px minmax(0, 1fr) 26px minmax(0, 1.05fr);
-            gap: 0;
-            align-items: center;
-            margin-bottom: 12px;
-        }
-
-        .flow-arrow {
-            position: relative;
-            display: block;
-            height: 1px;
-            background: var(--ink);
-        }
-
-        .flow-arrow::after {
-            content: "";
-            position: absolute;
-            top: -4px;
-            right: -1px;
-            border-top: 4px solid transparent;
-            border-bottom: 4px solid transparent;
-            border-left: 7px solid var(--ink);
-        }
-
-        .diagram-grid {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 10px;
-        }
-
-        .arch-group {
-            min-width: 0;
-            padding: 9px;
-            border: 1px solid var(--ink);
-            background: rgba(255, 255, 255, 0.34);
-        }
-
-        .arch-group--wide {
-            grid-column: span 2;
-        }
-
-        .arch-group h4 {
-            margin: 0 0 8px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid var(--line);
-            color: var(--stamp);
-            font-size: 0.78rem;
-            line-height: 1.25;
-            text-transform: uppercase;
-        }
-
-        .arch-nodes {
-            display: grid;
-            gap: 7px;
-        }
-
-        .arch-node {
-            min-width: 0;
-            padding: 7px 8px;
-            border: 1px solid var(--ink);
-            background: rgba(250, 250, 246, 0.74);
-            box-shadow: 1px 1px 0 rgba(21, 19, 14, 0.18);
-        }
-
-        .arch-node strong {
-            display: block;
-            font-size: 0.82rem;
-            line-height: 1.2;
-        }
-
-        .arch-node small {
-            display: block;
-            margin-top: 3px;
-            color: var(--muted);
-            font-size: 0.68rem;
-            line-height: 1.3;
-        }
-
-        .arch-node--accent {
-            border-color: var(--accent);
-            background: rgba(29, 79, 143, 0.1);
-        }
-
-        .arch-node--stamp {
-            border-color: var(--stamp);
-            background: rgba(127, 33, 29, 0.08);
-        }
-
-        .architecture-notes {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 0;
-            margin: 12px 0 0;
-            padding: 0;
-            list-style: none;
-            border-top: 1px solid var(--ink);
-            border-left: 1px solid var(--ink);
-            background: rgba(255, 255, 255, 0.24);
-        }
-
-        .architecture-notes li {
-            min-width: 0;
-            padding: 8px 9px;
-            border-right: 1px solid var(--ink);
-            border-bottom: 1px solid var(--ink);
-            color: var(--muted);
-            font-size: 0.76rem;
-            line-height: 1.35;
-        }
-
-        .architecture-notes strong {
-            display: block;
-            color: var(--ink);
-            font-size: 0.8rem;
-            text-transform: uppercase;
-        }
-
-        .skills {
-            display: contents;
-            margin: 0;
-            padding: 0;
-        }
-
-        .skills div {
-            display: contents;
-            min-width: 0;
-        }
-
-        .skills dt,
-        .skills dd {
-            min-width: 0;
-            padding: 13px 12px;
-            border-right: 1px solid var(--ink);
-            border-bottom: 1px solid var(--ink);
-        }
-
-        .skills dt {
-            margin: 0;
-            font-weight: 700;
-        }
-
-        .skills dd {
-            margin: 0;
-            color: var(--muted);
-        }
-
-        .contact {
-            display: grid;
-            grid-template-columns: var(--label-column) minmax(0, 1fr);
-            gap: 0;
-            padding-top: 0;
-            border-top: 1px solid var(--ink);
-            border-left: 1px solid var(--ink);
-        }
-
-        .contact > * {
-            padding: 13px 12px;
-            border-right: 1px solid var(--ink);
-            border-bottom: 1px solid var(--ink);
-        }
-
-        .contact-list {
-            display: grid;
-            gap: 0;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            border-top: 1px solid var(--ink);
-            border-left: 1px solid var(--ink);
-        }
-
-        .contact-list li {
-            display: grid;
-            grid-template-columns: 76px minmax(0, 1fr);
-            gap: 0;
-        }
-
-        .contact-list li > * {
-            padding: 7px 8px;
-            border-right: 1px solid var(--ink);
-            border-bottom: 1px solid var(--ink);
-        }
-
+        /* ---------- footer ---------- */
         .footer {
+            border-top: 1px solid var(--line);
+            padding: 26px 0 40px;
+        }
+        .footer__inner {
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            gap: 24px;
-            margin-top: 24px;
-            padding: 11px 12px;
-            border: 1px solid var(--ink);
+            gap: 20px;
             color: var(--muted);
-            font-size: 0.78rem;
+            font-size: 0.86rem;
         }
+        .footer__links { display: flex; gap: 20px; }
+        .footer__links a { color: var(--muted); font-weight: 500; }
+        .footer__links a:hover { color: var(--accent); text-decoration: none; }
 
-        .footer-links {
-            display: flex;
-            gap: 16px;
+        /* ---------- responsive ---------- */
+        @media (max-width: 900px) {
+            .hero__grid { grid-template-columns: 1fr; gap: 36px; }
+            .portrait { max-width: 260px; }
+            .portrait::after { display: none; }
+            .split { grid-template-columns: 1fr; gap: 28px; }
+            .contact-block { grid-template-columns: 1fr; }
         }
-
-        @keyframes typing {
-            from {
-                width: 0;
-            }
-            to {
-                width: 31ch;
-            }
-        }
-
-        @keyframes caret {
-            50% {
-                border-color: transparent;
-            }
-        }
-
-        @keyframes clearance-scan {
-            from {
-                transform: translateY(-100%);
-            }
-            to {
-                transform: translateY(100%);
-            }
-        }
-
-        @keyframes decrypt-progress {
-            from {
-                transform: translateX(-100%);
-            }
-            to {
-                transform: translateX(400%);
-            }
-        }
-
-        @keyframes cursor-blink {
-            50% {
-                opacity: 0;
-            }
-        }
-
-        @keyframes file-reveal {
-            from {
-                opacity: 0;
-                filter: blur(2px);
-                transform: translateY(6px);
-            }
-            to {
-                opacity: 1;
-                filter: blur(0);
-                transform: translateY(0);
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-
-            .typed-line {
-                width: auto;
-                animation: none;
-            }
-
-            .loader-card::before,
-            .loader-card::after,
-            .loader-title::before,
-            .loader-text::after,
-            .system-bar__dot,
-            .classified-panel.is-active {
-                animation: none;
-            }
-        }
-
-        @media (max-width: 760px) {
-            .page {
-                width: calc(100% - 12px);
-                max-width: none;
-                padding-top: 10px;
-            }
-
-            .site-header {
-                position: static;
-            }
-
-            .system-strip__seg--mid,
-            .system-bar__item--wide,
-            .system-bar__zoom {
-                display: none;
-            }
-
-            .site-header__inner,
-            .form-header,
-            .form-body,
-            section:not(.hero),
-            .section-heading,
-            .entry,
-            .contact {
-                grid-template-columns: 1fr;
-            }
-
-            .site-header__inner {
-                align-items: center;
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-
-            .download-record {
-                margin-left: auto;
-                padding: 7px 9px;
-                font-size: 0.72rem;
-            }
-
-            .file-tabs {
-                display: grid;
-                grid-template-columns: 1fr;
-            }
-
-            .file-tab {
-                width: 100%;
-                min-width: 0;
-            }
-
-            .hero {
-                gap: 26px;
-            }
-
-            .classification-strip,
-            .file-metadata {
-                grid-template-columns: 1fr;
-            }
-
-            .classification-strip {
-                flex-direction: column;
-                gap: 2px;
-            }
-
-            .record-stamp {
-                position: static;
-                width: max-content;
-                margin: 12px 0 0;
-                font-size: 1rem;
-                transform: rotate(-4deg);
-            }
-
-            .form-number {
-                width: max-content;
-                min-width: 0;
-            }
-
-            .field-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .field-grid > .field,
-            .field-grid > .field:nth-child(n),
-            .field-wide,
-            .photo-field,
-            .name-field {
-                grid-column: auto;
-                grid-row: auto;
-            }
-
-            .field {
-                min-height: auto;
-            }
-
-            .name-field .field-value {
-                font-size: clamp(2rem, 10vw, 2.7rem);
-            }
-
-            .portrait {
-                width: 100%;
-                max-width: 100%;
-            }
-
-            .portrait img {
-                width: 100%;
-                height: auto;
-            }
-
-            .portrait figcaption {
-                text-align: left;
-            }
-
-            .facts,
-            .skills {
-                grid-template-columns: 1fr;
-            }
-
-            .skills div {
-                grid-template-columns: 1fr;
-            }
-
-            .project-details div {
-                grid-template-columns: 1fr;
-            }
-
-            .project-details dt {
-                padding-bottom: 4px;
-                border-bottom: 0;
-            }
-
-            .project-details dd {
-                padding-top: 0;
-            }
-
-            .architecture-sheet {
-                margin: 12px 10px 14px;
-                padding: 10px;
-            }
-
-            .architecture-titlebar,
-            .flow-strip,
-            .diagram-grid,
-            .architecture-notes {
-                grid-template-columns: 1fr;
-            }
-
-            .architecture-titlebar {
-                gap: 4px;
-            }
-
-            .flow-strip {
-                gap: 8px;
-            }
-
-            .flow-arrow {
-                width: 1px;
-                height: 16px;
-                margin: 0 0 0 18px;
-            }
-
-            .flow-arrow::after {
-                top: auto;
-                right: -4px;
-                bottom: -1px;
-                border-top: 7px solid var(--ink);
-                border-right: 4px solid transparent;
-                border-left: 4px solid transparent;
-                border-bottom: 0;
-            }
-
-            .arch-group--wide {
-                grid-column: auto;
-            }
-
-            .paper-page {
-                padding: 20px 14px;
-            }
-
-            section + section {
-                margin-top: 22px;
-                padding-top: 0;
-            }
-
-            .entry,
-            .contact-list li,
-            .footer {
-                gap: 8px;
-            }
-
-            .contact-list li {
-                grid-template-columns: 1fr;
-            }
-
-            .typed-line {
-                white-space: normal;
-                border-right: 0;
-                animation: none;
-            }
-
-            .footer {
-                flex-direction: column;
-            }
+        @media (max-width: 720px) {
+            .wrap { width: calc(100% - 32px); }
+            .nav { display: none; }
+            .hero { padding: 52px 0 24px; }
+            .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .stats div:nth-child(2) { border-right: 0; }
+            .stats div:nth-child(1), .stats div:nth-child(2) { border-bottom: 1px solid var(--line); }
+            .card { grid-template-columns: 1fr; gap: 18px; }
+            .card__aside { border-right: 0; border-bottom: 1px solid var(--line); padding-right: 0; padding-bottom: 18px; }
+            .job { grid-template-columns: 1fr; gap: 8px; }
+            .skill-row { grid-template-columns: 1fr; gap: 8px; }
+            .arch-notes { grid-template-columns: 1fr; gap: 16px; }
+            .arch-notes li { border-left: 0; border-top: 2px solid var(--accent-soft); padding: 12px 0 0; }
+            .arch-notes li:first-child { padding-top: 0; border-top: 0; }
         }
 
         @media print {
-            @page {
-                size: A4 landscape;
-                margin: 8mm;
-            }
+            .site-header, .header-cta, .hero__actions, .contact-block, .footer { display: none !important; }
+            body { font-size: 12px; }
+            .arch-sheet { background: #fff; }
+            section.block { padding: 18px 0; break-inside: avoid; }
+            .card, .arch-card { break-inside: avoid; box-shadow: none; }
+        }
 
-            * {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-
-            body {
-                background: white;
-                padding: 0;
-            }
-
-            .site-header,
-            .file-tabs,
-            .classified-loader,
-            .system-strip,
-            .system-bar,
-            .footer,
-            body::after {
-                display: none !important;
-            }
-
-            .page {
-                width: 100%;
-                max-width: var(--sheet-width);
-                padding: 0;
-            }
-
-            .paper-page {
-                width: 100% !important;
-                max-width: var(--sheet-width);
-                margin: 0 !important;
-                margin-left: 0 !important;
-                border: 0;
-                box-shadow: none;
-                zoom: 1 !important;
-            }
-
-            .classified-panel,
-            .classified-panel[hidden] {
-                display: block !important;
-                animation: none !important;
-                break-inside: auto;
-                page-break-inside: auto;
-            }
-
-            .classified-panel + .classified-panel {
-                break-before: page;
-                page-break-before: always;
-            }
-
-            .hero,
-            .architecture-sheet,
-            .project-details,
-            .field-grid {
-                break-inside: avoid;
-                page-break-inside: avoid;
-            }
-
-            .record-stamp {
-                break-inside: avoid;
-            }
-
-            .form-header {
-                grid-template-columns: minmax(0, 1fr) auto;
-            }
-
-            .file-metadata {
-                grid-template-columns: repeat(4, minmax(0, 1fr));
-            }
-
-            section:not(.hero) {
-                grid-template-columns: var(--label-column) minmax(0, 1fr);
-            }
-
-            .section-heading,
-            .entry {
-                display: contents;
-            }
-
-            .field-grid {
-                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 240px;
-            }
-
-            .field-grid > .field,
-            .field-grid > .field:nth-child(n),
-            .field-wide,
-            .photo-field,
-            .name-field {
-                grid-column: auto;
-                grid-row: auto;
-            }
-
-            .name-field {
-                grid-column: 1 / span 2;
-                grid-row: 1;
-            }
-
-            .photo-field {
-                grid-column: 3;
-                grid-row: 1 / span 2;
-            }
-
-            .role-field {
-                grid-column: 1;
-                grid-row: 2;
-            }
-
-            .location-field {
-                grid-column: 2;
-                grid-row: 2;
-            }
-
-            .experience-field,
-            .delivery-field {
-                grid-column: 1 / span 2;
-            }
-
-            .strength-field,
-            .style-field {
-                grid-column: 3;
-            }
-
-            .field-wide {
-                grid-column: 1 / -1;
-            }
-
-            .contact-field-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-
-            .diagram-grid {
-                grid-template-columns: repeat(4, minmax(0, 1fr));
-            }
-
-            .arch-group--wide {
-                grid-column: span 2;
-            }
-
-            .architecture-titlebar {
-                grid-template-columns: minmax(0, 1fr) auto;
-            }
-
-            .architecture-notes {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-            }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            * { transition: none !important; }
         }
     </style>
 </head>
 <body>
-    <div class="system-strip" aria-hidden="true">
-        <span class="system-strip__seg">CH-01 · TLS 1.3 · AES-256-GCM</span>
-        <span class="system-strip__seg system-strip__seg--mid">Authorized access only · session monitored</span>
-        <span class="system-strip__seg" data-utc-clock>--:--:-- UTC</span>
-    </div>
     <header class="site-header">
-        <div class="site-header__inner">
-            <a class="mark" href="#top">reyco.seguma</a>
-            <a class="download-record" href="assets/reyco-seguma-confidential-dossier.pdf" download="reyco-seguma-confidential-dossier.pdf" data-download-record>Download dossier</a>
+        <div class="wrap site-header__inner">
+            <a class="brand" href="#top"><span class="dot"></span>Reyco Seguma</a>
+            <nav class="nav" aria-label="Primary">
+                <a href="#work">Work</a>
+                <a href="#architecture">Architecture</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a class="btn btn--primary header-cta" href="assets/reyco-seguma-cv.pdf" download="reyco-seguma-cv.pdf">Download CV</a>
         </div>
     </header>
 
-    <main id="top" class="page">
-        <div class="file-tabs" role="tablist" aria-label="Classified dossier files">
-            <button class="file-tab" type="button" role="tab" id="tab-subject" aria-controls="panel-subject" aria-selected="true" data-file-tab="subject">Subject file</button>
-            <button class="file-tab" type="button" role="tab" id="tab-assets" aria-controls="panel-assets" aria-selected="false" data-file-tab="assets">Asset files</button>
-            <button class="file-tab" type="button" role="tab" id="tab-architecture" aria-controls="panel-architecture" aria-selected="false" data-file-tab="architecture">Architecture</button>
-            <button class="file-tab" type="button" role="tab" id="tab-service" aria-controls="panel-service" aria-selected="false" data-file-tab="service">Service history</button>
-            <button class="file-tab" type="button" role="tab" id="tab-capabilities" aria-controls="panel-capabilities" aria-selected="false" data-file-tab="capabilities">Capabilities</button>
-        </div>
-
-        <div class="classified-loader" aria-live="polite" aria-hidden="true">
-            <div class="loader-card">
-                <span class="loader-title">Clearance Check</span>
-                <span class="loader-text">Decrypting classified file...</span>
-                <span class="loader-status">Stand by for access authorization.</span>
-            </div>
-        </div>
-
-        <div class="paper-page">
-        <div class="classified-panel is-active" id="panel-subject" role="tabpanel" aria-labelledby="tab-subject" data-file-panel="subject">
-        <section class="hero" aria-labelledby="intro-title">
-            <div class="classification-strip" aria-label="Classification status">
-                <span>Confidential</span>
-                <span>Personnel Dossier</span>
-                <span>Controlled Record</span>
-            </div>
-
-            <div class="record-stamp" aria-hidden="true">Confidential</div>
-
-            <div class="form-header">
+    <main id="top">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="wrap hero__grid">
                 <div>
-                    <p class="form-subtitle">Subject File <span class="redacted" aria-hidden="true"></span> Manila Field Record</p>
-                    <p class="form-title">Engineer Personnel Dossier</p>
-                </div>
-                <div class="form-number" aria-label="Record number">RS-2026</div>
-            </div>
-
-            <div class="file-metadata" aria-label="Record metadata">
-                <span>Class: <strong>Confidential</strong></span>
-                <span>Subject: <strong>R. Seguma</strong></span>
-                <span>Access: <strong>Controlled</strong></span>
-                <span>Status: <strong>Active</strong></span>
-            </div>
-
-            <div class="form-body">
-                <div class="field-grid" aria-label="Profile information">
-                    <div class="field name-field">
-                        <span class="field-label">Full name</span>
-                        <h1 id="intro-title" class="field-value">Reyco Seguma</h1>
-                    </div>
-                    <div class="field role-field">
-                        <span class="field-label">Operational role</span>
-                        <span class="field-value typed-line">Full Stack Software Engineer</span>
-                    </div>
-                    <figure class="field portrait photo-field">
-                        <img src="assets/profile.jpeg" alt="Portrait of Reyco Seguma">
-                    </figure>
-                    <div class="field location-field">
-                        <span class="field-label">Location</span>
-                        <span class="field-value">Manila, Philippines</span>
-                    </div>
-                    <div class="field experience-field">
-                        <span class="field-label">Verified tenure</span>
-                        <span class="field-value">8+ years</span>
-                    </div>
-                    <div class="field strength-field">
-                        <span class="field-label">Primary capability</span>
-                        <span class="field-value">System design</span>
-                    </div>
-                    <div class="field delivery-field">
-                        <span class="field-label">Delivery protocol</span>
-                        <span class="field-value">CI/CD automation</span>
-                    </div>
-                    <div class="field style-field">
-                        <span class="field-label">Operating pattern</span>
-                        <span class="field-value">Clean architecture</span>
-                    </div>
-                </div>
-
-                <div class="field-grid contact-field-grid" aria-label="Contact information">
-                    <div class="field">
-                        <span class="field-label">Channel / Email</span>
-                        <a class="field-value" href="mailto:segumareyco@gmail.com">segumareyco@gmail.com</a>
-                    </div>
-                    <div class="field">
-                        <span class="field-label">Channel / Phone</span>
-                        <a class="field-value" href="tel:+639089444999">+63 (908) 944 4999</a>
-                    </div>
-                    <div class="field">
-                        <span class="field-label">Public repository</span>
-                        <a class="field-value" href="https://github.com/xreyc" target="_blank" rel="noopener noreferrer">github.com/xreyc</a>
-                    </div>
-                    <div class="field">
-                        <span class="field-label">Public identity</span>
-                        <a class="field-value" href="https://linkedin.com/in/reyco-seguma" target="_blank" rel="noopener noreferrer">linkedin.com/in/reyco-seguma</a>
-                    </div>
-                </div>
-
-                <div class="field-grid statement-grid" aria-label="Professional statement">
-                    <div class="field field-wide summary-field">
-                        <span class="field-label">Analyst summary</span>
-                        <p class="intro">
-                            I build reliable product systems across backend services, event-driven workflows,
-                            cloud automation, and user-facing applications. I care about clean boundaries,
-                            maintainable architecture, and engineering choices that still make sense after
-                            the first release.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        </div>
-
-        <div class="classified-panel" id="panel-assets" role="tabpanel" aria-labelledby="tab-assets" data-file-panel="assets" hidden>
-        <section class="hero tab-record-header" aria-label="System asset file header">
-            <div class="classification-strip" aria-label="Classification status">
-                <span>Confidential</span>
-                <span>Asset Files</span>
-                <span>Controlled Record</span>
-            </div>
-            <div class="record-stamp" aria-hidden="true">Confidential</div>
-            <div class="form-header">
-                <div>
-                    <p class="form-subtitle">Subject File <span class="redacted" aria-hidden="true"></span> System Asset Annex</p>
-                    <p class="form-title">System Asset Files</p>
-                </div>
-                <div class="form-number" aria-label="Record number">RS-2026-A</div>
-            </div>
-            <div class="file-metadata" aria-label="Record metadata">
-                <span>Class: <strong>Confidential</strong></span>
-                <span>Subject: <strong>R. Seguma</strong></span>
-                <span>File: <strong>Assets</strong></span>
-                <span>Status: <strong>Active</strong></span>
-            </div>
-        </section>
-        <section id="work" aria-labelledby="work-title">
-            <div class="section-heading">
-                <span class="section-label">01</span>
-                <h2 id="work-title">System Asset Files</h2>
-            </div>
-
-            <article class="entry">
-                <p class="meta">Asset file / OSS-01</p>
-                <div>
-                    <h3>Maintainerd</h3>
-                    <p class="project-summary">
-                        Subject maintains an open-source cloud platform for self-hostable services,
-                        designed for teams that need identity, storage, messaging, databases, jobs,
-                        observability, billing, and related infrastructure under their own control.
+                    <span class="eyebrow">Full Stack Software Engineer</span>
+                    <h1>Reyco Seguma</h1>
+                    <p class="hero__role">I build reliable product systems — <b>backend</b>, <b>cloud</b>, and <b>frontend</b>.</p>
+                    <p class="hero__intro">
+                        Full stack engineer with 8+ years shipping backend services, event-driven
+                        workflows, cloud automation, and the interfaces on top. I care about clean
+                        boundaries, maintainable architecture, and engineering choices that still make
+                        sense after the first release.
                     </p>
-                    <dl class="project-details" aria-label="Maintainerd details">
-                        <div>
-                            <dt>Codename</dt>
-                            <dd>Maintainerd</dd>
-                        </div>
-                        <div>
-                            <dt>Function</dt>
-                            <dd>Self-hostable service platform with standalone modules and a planned shared control plane.</dd>
-                        </div>
-                        <div>
-                            <dt>Auth node</dt>
-                            <dd>OAuth 2.0 / OpenID Connect provider and identity broker with federation, MFA, multi-tenancy, and fine-grained authorization.</dd>
-                        </div>
-                        <div>
-                            <dt>Core node</dt>
-                            <dd>Planned shared control plane for tenants, services, health, topology, and service coordination.</dd>
-                        </div>
-                        <div>
-                            <dt>Service map</dt>
-                            <dd>Runtime, database, domains, secrets, gateway, storage, messaging, jobs, observability, billing, project, and support.</dd>
-                        </div>
-                        <div>
-                            <dt>Materials</dt>
-                            <dd>Go, PostgreSQL, React, Docker.</dd>
-                        </div>
-                        <div>
-                            <dt>Evidence</dt>
-                            <dd>
-                                <a href="https://maintainerd.dev/" target="_blank" rel="noopener noreferrer">project site</a>
-                                <a href="https://maintainerd.dev/services/auth/" target="_blank" rel="noopener noreferrer">auth overview</a>
-                                <a href="https://github.com/maintainerd" target="_blank" rel="noopener noreferrer">github</a>
-                            </dd>
-                        </div>
-                    </dl>
+                    <div class="hero__meta">
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Manila, Philippines
+                        </span>
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                            Lead Engineer @ Full Scale, for Lula
+                        </span>
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                            Open-source maintainer
+                        </span>
+                    </div>
+                    <div class="hero__actions">
+                        <a class="btn btn--primary" href="mailto:segumareyco@gmail.com">Get in touch</a>
+                        <a class="btn btn--ghost" href="https://github.com/xreyc" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a class="btn btn--ghost" href="https://linkedin.com/in/reyco-seguma" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </div>
                 </div>
-            </article>
-
-            <article class="entry">
-                <p class="meta">Asset file / ENT-02</p>
-                <div>
-                    <h3>Medlexer</h3>
-                    <p class="project-summary">
-                        Subject contributed to an integrated hospital and laboratory information
-                        system supporting operational workflows, patient result handling, laboratory
-                        automation, approvals, and healthcare data standards.
-                    </p>
-                    <dl class="project-details" aria-label="Medlexer details">
-                        <div>
-                            <dt>Codename</dt>
-                            <dd>Medlexer</dd>
-                        </div>
-                        <div>
-                            <dt>Function</dt>
-                            <dd>Integrated HIS/LIS operations platform for healthcare environments.</dd>
-                        </div>
-                        <div>
-                            <dt>Coverage</dt>
-                            <dd>Clinical operations, patient results, laboratory automation, approval flows, and healthcare reporting.</dd>
-                        </div>
-                        <div>
-                            <dt>Protocols</dt>
-                            <dd>HL7 and ICD-10 support for hospital and laboratory workflows.</dd>
-                        </div>
-                        <div>
-                            <dt>Materials</dt>
-                            <dd>.NET / C#, Electron, PostgreSQL.</dd>
-                        </div>
-                    </dl>
-                </div>
-            </article>
-        </section>
-        </div>
-
-        <div class="classified-panel" id="panel-architecture" role="tabpanel" aria-labelledby="tab-architecture" data-file-panel="architecture" hidden>
-        <section class="hero tab-record-header" aria-label="Architecture file header">
-            <div class="classification-strip" aria-label="Classification status">
-                <span>Confidential</span>
-                <span>Architecture Annex</span>
-                <span>Controlled Record</span>
+                <figure class="portrait">
+                    <img src="assets/profile.jpeg" alt="Portrait of Reyco Seguma">
+                </figure>
             </div>
-            <div class="record-stamp" aria-hidden="true">Confidential</div>
-            <div class="form-header">
-                <div>
-                    <p class="form-subtitle">Subject File <span class="redacted" aria-hidden="true"></span> Systems Architecture Annex</p>
-                    <p class="form-title">Production Architecture Schematics</p>
-                </div>
-                <div class="form-number" aria-label="Record number">RS-2026-X</div>
-            </div>
-            <div class="file-metadata" aria-label="Record metadata">
-                <span>Class: <strong>Confidential</strong></span>
-                <span>Subject: <strong>R. Seguma</strong></span>
-                <span>File: <strong>Architecture</strong></span>
-                <span>Status: <strong>Active</strong></span>
+            <div class="wrap">
+                <dl class="stats">
+                    <div><dt>8+ yrs</dt><dd>Engineering experience</dd></div>
+                    <div><dt>2</dt><dd>Open-source platforms built</dd></div>
+                    <div><dt>Full stack</dt><dd>Backend · Cloud · Frontend</dd></div>
+                    <div><dt>Go · Rust</dt><dd>Core systems languages</dd></div>
+                </dl>
             </div>
         </section>
 
-        <section id="architecture" aria-labelledby="architecture-title">
-            <div class="section-heading">
-                <span class="section-label">03</span>
-                <h2 id="architecture-title">Architecture Showcase</h2>
-            </div>
+        <!-- WORK -->
+        <section class="block" id="work">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="eyebrow">Selected work</span>
+                    <h2>Projects &amp; products</h2>
+                    <p>A mix of open-source platforms I build and maintain, and production systems I've engineered for healthcare and service operations.</p>
+                </div>
 
-            <article class="entry architecture-entry">
-                <p class="meta">Schematic / Event Driven</p>
-                <div>
-                    <div class="architecture-copy">
-                        <h3>Event-driven payment and receipt processing</h3>
-                        <p class="project-summary">
-                            Production-style AWS flow for receiving a payment: the command Lambda records a
+                <div class="cards">
+                    <!-- Maintainerd -->
+                    <article class="card">
+                        <div class="card__aside">
+                            <span class="card__tag">Creator · Open source</span>
+                            <h3>Maintainerd</h3>
+                            <p class="card__year">Cloud platform · in active development</p>
+                        </div>
+                        <div class="card__body">
+                            <p>
+                                An open-source, self-hostable cloud platform that gives teams identity,
+                                storage, messaging, databases, jobs, observability, and billing under
+                                their own control. The auth service is a full OAuth 2.0 / OpenID Connect
+                                provider and identity broker with federation, MFA, multi-tenancy, and
+                                fine-grained authorization; a shared control plane coordinates tenants,
+                                services, health, and topology across the fleet.
+                            </p>
+                            <div class="chips">
+                                <span class="chip">Go</span>
+                                <span class="chip">PostgreSQL</span>
+                                <span class="chip">React</span>
+                                <span class="chip">gRPC</span>
+                                <span class="chip">Docker</span>
+                            </div>
+                            <div class="card__links">
+                                <a href="https://maintainerd.dev" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20 15 15 0 010-20z"/></svg>
+                                    maintainerd.dev
+                                </a>
+                                <a href="https://maintainerd.dev/services/auth/" target="_blank" rel="noopener noreferrer">Auth overview</a>
+                                <a href="https://github.com/maintainerd" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.85 9.73.5.1.68-.22.68-.49v-1.7c-2.79.62-3.38-1.22-3.38-1.22-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.58 2.36 1.12 2.94.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 015 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.02 10.02 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg>
+                                    github.com/maintainerd
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Pebbles -->
+                    <article class="card">
+                        <div class="card__aside">
+                            <span class="card__tag">Creator · Open source</span>
+                            <h3>Pebbles</h3>
+                            <p class="card__year">GUI framework for Rust</p>
+                        </div>
+                        <div class="card__body">
+                            <p>
+                                A Flutter-style, GPU-accelerated GUI framework for Rust. One codebase
+                                targets desktop, web, and mobile, driven by fine-grained reactive signals
+                                and a catalog of 60+ shadcn-styled widgets rendered on a WebGPU / Vello
+                                pipeline. Ships with a CLI, a live widget gallery, and lifecycle tooling
+                                designed for building real applications — not demos.
+                            </p>
+                            <div class="chips">
+                                <span class="chip">Rust</span>
+                                <span class="chip">WebGPU</span>
+                                <span class="chip">Vello</span>
+                                <span class="chip">WASM</span>
+                                <span class="chip">Reactive signals</span>
+                            </div>
+                            <div class="card__links">
+                                <a href="https://pebbles-hq.github.io/" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20 15 15 0 010-20z"/></svg>
+                                    pebbles-hq.github.io
+                                </a>
+                                <a href="https://github.com/pebbles-hq/pebbles" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.85 9.73.5.1.68-.22.68-.49v-1.7c-2.79.62-3.38-1.22-3.38-1.22-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.58 2.36 1.12 2.94.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 015 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.02 10.02 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg>
+                                    github.com/pebbles-hq
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Medlexer -->
+                    <article class="card">
+                        <div class="card__aside">
+                            <span class="card__tag">Core engineer</span>
+                            <h3>Medlexer</h3>
+                            <p class="card__year">Healthcare · HIS / LIS platform</p>
+                        </div>
+                        <div class="card__body">
+                            <p>
+                                An integrated hospital and laboratory information system (HIS/LIS)
+                                supporting clinical operations, patient result handling, laboratory
+                                automation, approval flows, and healthcare reporting. Built around
+                                healthcare data standards with HL7 messaging and ICD-10 coding for
+                                hospital and laboratory workflows.
+                            </p>
+                            <div class="chips">
+                                <span class="chip">C# / .NET</span>
+                                <span class="chip">Electron</span>
+                                <span class="chip">PostgreSQL</span>
+                                <span class="chip">HL7</span>
+                                <span class="chip">ICD-10</span>
+                            </div>
+                            <p class="card__note">Private enterprise system — deployed in clinical environments.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ARCHITECTURE -->
+        <section class="block" id="architecture">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="eyebrow">System design</span>
+                    <h2>Architecture I design &amp; ship</h2>
+                    <p>Two representative production patterns — an event-driven serverless pipeline on AWS, and a containerized Go microservices platform on Kubernetes — showing how I keep systems reliable, secure, and observable.</p>
+                </div>
+
+                <div class="arch-grid">
+                    <article class="arch-card">
+                        <div class="arch-card__head">
+                            <h3>Event-driven payment &amp; receipt processing</h3>
+                            <span class="mono">ARCH-01 · AWS</span>
+                        </div>
+                        <p class="arch-card__copy">
+                            A production-style AWS flow for receiving a payment: the command Lambda records a
                             DynamoDB key reference and lands the raw payload in S3 as JSON, and the S3 object
                             event triggers SNS fan-out into two independent queues — a receipt queue whose
-                            worker renders the PDF artifact, and an analytics queue whose loader Lambda
-                            copies events into Redshift for warehousing — keeping rendering and analytics
-                            decoupled and the whole path observable and replayable.
+                            worker renders the PDF artifact, and an analytics queue whose loader Lambda copies
+                            events into Redshift — keeping rendering and analytics decoupled, and the whole
+                            path observable and replayable.
                         </p>
-                    </div>
-
-                    <div class="architecture-sheet" aria-label="Event-driven AWS payment receipt architecture">
-                        <div class="architecture-titlebar">
-                            <strong>Event-driven receipt pipeline</strong>
-                            <span>ARCH-01 / AWS</span>
-                        </div>
-
-                        <svg class="blueprint" viewBox="0 0 960 640" role="img" aria-label="Blueprint schematic of the event-driven AWS payment and receipt pipeline: client through edge guard, payment Lambda writing a DynamoDB key reference and raw JSON to S3, the S3 object event triggering SNS fan-out into two queues: a receipt queue with worker Lambda, PDF to S3 evidence and notification, and an analytics queue with a loader Lambda copying into Redshift for warehousing, plus dead-letter queue, replay, and observability plane">
+                        <div class="arch-sheet" aria-label="Event-driven AWS payment receipt architecture">
+<svg class="blueprint" viewBox="0 0 960 640" role="img" aria-label="Architecture diagram of the event-driven AWS payment and receipt pipeline: client through edge guard, payment Lambda writing a DynamoDB key reference and raw JSON to S3, the S3 object event triggering SNS fan-out into two queues: a receipt queue with worker Lambda, PDF to S3 evidence and notification, and an analytics queue with a loader Lambda copying into Redshift for warehousing, plus dead-letter queue, replay, and observability plane">
                             <defs>
                                 <marker id="bp1-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="#1d4f8f"/></marker>
                                 <marker id="bp1-r" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="#84261f"/></marker>
@@ -2257,38 +932,29 @@
                                 <text class="bp-tb-label" x="798" y="560">SHEET</text>
                                 <text class="bp-tb-value" x="798" y="572">1 / 2</text>
                                 <text class="bp-tb-label" x="630" y="594">CLASS</text>
-                                <text class="bp-tb-value bp-tb-red" x="690" y="595">CONFIDENTIAL</text>
+                                <text class="bp-tb-value bp-tb-red" x="690" y="595">REFERENCE</text>
                             </g>
                         </svg>
-
-                        <ul class="architecture-notes" aria-label="Event-driven architecture notes">
+                        </div>
+                        <ul class="arch-notes">
                             <li><strong>Reliable</strong>Idempotent commands, durable queues, DLQ redrive, and traceable retries.</li>
                             <li><strong>Secure</strong>WAF, Cognito, scoped IAM, KMS encryption, and signed receipt access.</li>
                             <li><strong>Observable</strong>CloudWatch alarms, X-Ray traces, correlation IDs, and audit events.</li>
                         </ul>
-                    </div>
-                </div>
-            </article>
+                    </article>
 
-            <article class="entry architecture-entry">
-                <p class="meta">Schematic / Microservices</p>
-                <div>
-                    <div class="architecture-copy">
-                        <h3>Go microservices on Kubernetes</h3>
-                        <p class="project-summary">
-                            Containerized service platform layout with Go services, internal gRPC,
-                            asynchronous RabbitMQ workflows, Redis coordination, Postgres persistence,
-                            and platform-level telemetry for production operations.
-                        </p>
-                    </div>
-
-                    <div class="architecture-sheet" aria-label="Go microservices Kubernetes architecture">
-                        <div class="architecture-titlebar">
-                            <strong>Kubernetes service mesh and data plane</strong>
-                            <span>ARCH-02 / K8S</span>
+                    <article class="arch-card">
+                        <div class="arch-card__head">
+                            <h3>Go microservices on Kubernetes</h3>
+                            <span class="mono">ARCH-02 · K8S</span>
                         </div>
-
-                        <svg class="blueprint" viewBox="0 0 960 700" role="img" aria-label="Blueprint schematic of the Go microservices Kubernetes platform: client through TLS ingress and API gateway into the EKS cluster, Go service pods with gRPC mesh, RabbitMQ exchange with dead-letter queue and worker service, service-owned data plane, CI/CD deploy path, and observability plane">
+                        <p class="arch-card__copy">
+                            A containerized service platform with Go services, internal gRPC, asynchronous
+                            RabbitMQ workflows, Redis coordination, Postgres persistence, and platform-level
+                            telemetry — laid out for safe deploys and production operations.
+                        </p>
+                        <div class="arch-sheet" aria-label="Go microservices Kubernetes architecture">
+<svg class="blueprint" viewBox="0 0 960 700" role="img" aria-label="Architecture diagram of the Go microservices Kubernetes platform: client through TLS ingress and API gateway into the EKS cluster, Go service pods with gRPC mesh, RabbitMQ exchange with dead-letter queue and worker service, service-owned data plane, CI/CD deploy path, and observability plane">
                             <defs>
                                 <marker id="bp2-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="#1d4f8f"/></marker>
                                 <marker id="bp2-r" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="#84261f"/></marker>
@@ -2455,541 +1121,176 @@
                                 <text class="bp-tb-label" x="798" y="604">REV</text>
                                 <text class="bp-tb-value" x="798" y="614">B</text>
                                 <text class="bp-tb-label" x="630" y="630">CLASS</text>
-                                <text class="bp-tb-value bp-tb-red" x="630" y="641">CONFIDENTIAL</text>
+                                <text class="bp-tb-value bp-tb-red" x="630" y="641">REFERENCE</text>
                                 <text class="bp-tb-label" x="798" y="630">SHEET</text>
                                 <text class="bp-tb-value" x="798" y="641">2 / 2</text>
                             </g>
                         </svg>
-
-                        <ul class="architecture-notes" aria-label="Microservices architecture notes">
-                            <li><strong>Scalable</strong>Pods scale by workload, queues absorb spikes, and workers process safely.</li>
-                            <li><strong>Maintainable</strong>Bounded contexts keep storage, ownership, and contracts explicit.</li>
-                            <li><strong>Operable</strong>Telemetry, health checks, deploy gates, and rollback paths are first-class.</li>
+                        </div>
+                        <ul class="arch-notes">
+                            <li><strong>Scalable</strong>Stateless Go pods, horizontal autoscaling, and service-owned data stores.</li>
+                            <li><strong>Decoupled</strong>gRPC for sync calls, RabbitMQ with a dead-letter queue for async work.</li>
+                            <li><strong>Operable</strong>CI/CD deploys, RBAC, network policy, and a full telemetry plane.</li>
                         </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="block" id="experience">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="eyebrow">Experience</span>
+                    <h2>Where I've worked</h2>
+                </div>
+                <div class="timeline">
+                    <article class="job">
+                        <div class="job__period">
+                            Mar 2024 — Present
+                            <span class="mono">Current</span>
+                        </div>
+                        <div>
+                            <h3>Lead Full Stack Engineer <span>— <a href="https://fullscale.io/" target="_blank" rel="noopener noreferrer">Full Scale</a>, for Lula</span></h3>
+                            <p>
+                                Lead engineer on Full Scale's Philippine team supporting Lula's Foresight
+                                product, working across backend and frontend systems — service request
+                                intake, work order creation, dispatching, multi-vendor completion flows,
+                                and external service integrations — in distributed collaboration across
+                                the Philippines, India, and the United States.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="job">
+                        <div class="job__period">Sep 2023 — Mar 2024</div>
+                        <div>
+                            <h3>Innovations <span>— <a href="https://www.via-appia.ph/" target="_blank" rel="noopener noreferrer">Via Appia Philippines</a></span></h3>
+                            <p>
+                                Turned early product ideas into working application capabilities for
+                                client-facing systems, improved integration patterns, and prepared
+                                production handoff paths.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="job">
+                        <div class="job__period">Mar 2021 — Sep 2023</div>
+                        <div>
+                            <h3>Technical Consultant <span>— <a href="https://www.via-appia.ph/" target="_blank" rel="noopener noreferrer">Via Appia Philippines</a></span></h3>
+                            <p>
+                                Owned requirements, solution design, backend and frontend implementation,
+                                database work, deployment coordination, and production support across
+                                business-process and integration-heavy systems.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="job">
+                        <div class="job__period">Mar 2019 — Mar 2021</div>
+                        <div>
+                            <h3>Junior Technical Consultant <span>— <a href="https://www.via-appia.ph/" target="_blank" rel="noopener noreferrer">Via Appia Philippines</a></span></h3>
+                            <p>
+                                Built web applications, database designs, and business-process systems,
+                                then grew into broader client-facing engineering responsibilities.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION + SKILLS -->
+        <section class="block" id="skills">
+            <div class="wrap">
+                <div class="split">
+                    <div>
+                        <div class="section-head">
+                            <span class="eyebrow">Education</span>
+                            <h2>Background</h2>
+                        </div>
+                        <div class="edu-card">
+                            <h3>BS Electronics Engineering</h3>
+                            <p class="job__period"><a href="https://www.ndmu.edu.ph/" target="_blank" rel="noopener noreferrer">Notre Dame of Marbel University</a> · 2014 — 2019</p>
+                            <p>
+                                Five-year engineering program covering circuit design, embedded systems,
+                                telecommunications, signal processing, and network fundamentals.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="section-head">
+                            <span class="eyebrow">Toolbox</span>
+                            <h2>Skills &amp; tech</h2>
+                        </div>
+                        <dl class="skills">
+                            <div class="skill-row">
+                                <dt>Backend</dt>
+                                <dd><div class="skill-tags"><span class="chip">Go</span><span class="chip">Node.js</span><span class="chip">C# / .NET Core</span><span class="chip">Laravel</span><span class="chip">RabbitMQ</span><span class="chip">Kafka</span></div></dd>
+                            </div>
+                            <div class="skill-row">
+                                <dt>Frontend</dt>
+                                <dd><div class="skill-tags"><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">SolidJS</span><span class="chip">Vue</span><span class="chip">Flutter / Dart</span></div></dd>
+                            </div>
+                            <div class="skill-row">
+                                <dt>Cloud &amp; infra</dt>
+                                <dd><div class="skill-tags"><span class="chip">AWS</span><span class="chip">Google Cloud</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Helm</span><span class="chip">GitHub Actions</span></div></dd>
+                            </div>
+                            <div class="skill-row">
+                                <dt>Data</dt>
+                                <dd><div class="skill-tags"><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">MongoDB</span><span class="chip">Redis</span></div></dd>
+                            </div>
+                            <div class="skill-row">
+                                <dt>Observability</dt>
+                                <dd><div class="skill-tags"><span class="chip">Datadog</span><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">SigNoz</span><span class="chip">CloudWatch</span></div></dd>
+                            </div>
+                            <div class="skill-row">
+                                <dt>Systems &amp; UI</dt>
+                                <dd><div class="skill-tags"><span class="chip">Rust</span><span class="chip">WebGPU</span><span class="chip">Vello</span><span class="chip">AvaloniaUI</span></div></dd>
+                            </div>
+                        </dl>
                     </div>
                 </div>
-            </article>
-        </section>
-        </div>
-
-        <div class="classified-panel" id="panel-service" role="tabpanel" aria-labelledby="tab-service" data-file-panel="service" hidden>
-        <section class="hero tab-record-header" aria-label="Service history file header">
-            <div class="classification-strip" aria-label="Classification status">
-                <span>Confidential</span>
-                <span>Service History</span>
-                <span>Controlled Record</span>
-            </div>
-            <div class="record-stamp" aria-hidden="true">Confidential</div>
-            <div class="form-header">
-                <div>
-                    <p class="form-subtitle">Subject File <span class="redacted" aria-hidden="true"></span> Assignment History Annex</p>
-                    <p class="form-title">Service History</p>
-                </div>
-                <div class="form-number" aria-label="Record number">RS-2026-S</div>
-            </div>
-            <div class="file-metadata" aria-label="Record metadata">
-                <span>Class: <strong>Confidential</strong></span>
-                <span>Subject: <strong>R. Seguma</strong></span>
-                <span>File: <strong>Service</strong></span>
-                <span>Status: <strong>Active</strong></span>
             </div>
         </section>
-        <section id="experience" aria-labelledby="experience-title">
-            <div class="section-heading">
-                <span class="section-label">02</span>
-                <h2 id="experience-title">Service History</h2>
-            </div>
 
-            <article class="entry">
-                <p class="meta">Assignment / Active</p>
-                <div>
-                    <h3>
-                        Lead Full Stack Engineer,
-                        <a href="https://fullscale.io/" target="_blank" rel="noopener noreferrer">Full Scale</a>
-                        for Lula
-                    </h3>
-                    <dl class="project-details" aria-label="Active assignment details">
-                        <div>
-                            <dt>Period</dt>
-                            <dd>March 2024 - Present</dd>
-                        </div>
-                        <div>
-                            <dt>Station</dt>
-                            <dd>Full Scale Philippine team supporting Lula's Foresight product.</dd>
-                        </div>
-                        <div>
-                            <dt>Coverage</dt>
-                            <dd>Backend and frontend systems across service request intake, work order creation, dispatching, multi-vendor completion flows, and external service integrations.</dd>
-                        </div>
-                        <div>
-                            <dt>Coordination</dt>
-                            <dd>Distributed collaboration across the Philippines, India, the United States, and other regions.</dd>
-                        </div>
-                    </dl>
+        <!-- CONTACT -->
+        <section class="block" id="contact">
+            <div class="wrap">
+                <div class="contact-block">
+                    <div>
+                        <h2>Let's build something</h2>
+                        <p>Open to interesting engineering work and collaboration. The fastest way to reach me is email — I usually reply within a day.</p>
+                    </div>
+                    <div class="contact-actions">
+                        <a href="mailto:segumareyco@gmail.com">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+                            segumareyco@gmail.com
+                        </a>
+                        <a href="tel:+639089444999">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.68 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0122 16.92z"/></svg>
+                            +63 (908) 944 4999
+                        </a>
+                        <a href="https://github.com/xreyc" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.85 9.73.5.1.68-.22.68-.49v-1.7c-2.79.62-3.38-1.22-3.38-1.22-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.58 2.36 1.12 2.94.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 015 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.02 10.02 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg>
+                            github.com/xreyc
+                        </a>
+                        <a href="https://linkedin.com/in/reyco-seguma" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                            linkedin.com/in/reyco-seguma
+                        </a>
+                    </div>
                 </div>
-            </article>
-
-            <article class="entry">
-                <p class="meta">Assignment / Product</p>
-                <div>
-                    <h3>
-                        Innovations,
-                        <a href="https://www.via-appia.ph/" target="_blank" rel="noopener noreferrer">Via Appia Philippines</a>
-                    </h3>
-                    <dl class="project-details" aria-label="Innovations assignment details">
-                        <div>
-                            <dt>Period</dt>
-                            <dd>Sept 2023 - March 2024</dd>
-                        </div>
-                        <div>
-                            <dt>Activity</dt>
-                            <dd>Converted early product ideas into working application capabilities for client-facing systems.</dd>
-                        </div>
-                        <div>
-                            <dt>Finding</dt>
-                            <dd>Improved integration patterns and prepared production handoff paths.</dd>
-                        </div>
-                    </dl>
-                </div>
-            </article>
-
-            <article class="entry">
-                <p class="meta">Assignment / Consultant</p>
-                <div>
-                    <h3>
-                        Technical Consultant,
-                        <a href="https://www.via-appia.ph/" target="_blank" rel="noopener noreferrer">Via Appia Philippines</a>
-                    </h3>
-                    <dl class="project-details" aria-label="Technical consultant assignment details">
-                        <div>
-                            <dt>Period</dt>
-                            <dd>March 2021 - Sept 2023</dd>
-                        </div>
-                        <div>
-                            <dt>Coverage</dt>
-                            <dd>Requirements, solution design, backend and frontend implementation, database work, deployment coordination, and production support.</dd>
-                        </div>
-                        <div>
-                            <dt>Exposure</dt>
-                            <dd>Client-facing delivery across business-process and integration-heavy systems.</dd>
-                        </div>
-                    </dl>
-                </div>
-            </article>
-
-            <article class="entry">
-                <p class="meta">Assignment / Junior</p>
-                <div>
-                    <h3>
-                        Junior Technical Consultant,
-                        <a href="https://www.via-appia.ph/" target="_blank" rel="noopener noreferrer">Via Appia Philippines</a>
-                    </h3>
-                    <dl class="project-details" aria-label="Junior consultant assignment details">
-                        <div>
-                            <dt>Period</dt>
-                            <dd>March 2019 - March 2021</dd>
-                        </div>
-                        <div>
-                            <dt>Activity</dt>
-                            <dd>Built web applications, database designs, business-process systems, and delivery support foundations.</dd>
-                        </div>
-                        <div>
-                            <dt>Progression</dt>
-                            <dd>Expanded into broader client-facing engineering responsibilities.</dd>
-                        </div>
-                    </dl>
-                </div>
-            </article>
-        </section>
-        </div>
-
-        <div class="classified-panel" id="panel-capabilities" role="tabpanel" aria-labelledby="tab-capabilities" data-file-panel="capabilities" hidden>
-        <section class="hero tab-record-header" aria-label="Capability file header">
-            <div class="classification-strip" aria-label="Classification status">
-                <span>Confidential</span>
-                <span>Capability Index</span>
-                <span>Controlled Record</span>
-            </div>
-            <div class="record-stamp" aria-hidden="true">Confidential</div>
-            <div class="form-header">
-                <div>
-                    <p class="form-subtitle">Subject File <span class="redacted" aria-hidden="true"></span> Training And Capability Annex</p>
-                    <p class="form-title">Training And Capability Index</p>
-                </div>
-                <div class="form-number" aria-label="Record number">RS-2026-C</div>
-            </div>
-            <div class="file-metadata" aria-label="Record metadata">
-                <span>Class: <strong>Confidential</strong></span>
-                <span>Subject: <strong>R. Seguma</strong></span>
-                <span>File: <strong>Capabilities</strong></span>
-                <span>Status: <strong>Active</strong></span>
             </div>
         </section>
-        <section id="education" aria-labelledby="education-title">
-            <div class="section-heading">
-                <span class="section-label">03</span>
-                <h2 id="education-title">Training Record</h2>
-            </div>
-
-            <article class="entry">
-                <p class="meta">Credential / Academic</p>
-                <div>
-                    <h3>
-                        BS Electronics Engineering,
-                        <a href="https://www.ndmu.edu.ph/" target="_blank" rel="noopener noreferrer">Notre Dame of Marbel University</a>
-                    </h3>
-                    <dl class="project-details" aria-label="Training record details">
-                        <div>
-                            <dt>Period</dt>
-                            <dd>2014 - 2019</dd>
-                        </div>
-                        <div>
-                            <dt>Program</dt>
-                            <dd>Five-year engineering program in electronics engineering.</dd>
-                        </div>
-                        <div>
-                            <dt>Coverage</dt>
-                            <dd>Circuit design, embedded systems, telecommunications, signal processing, and network fundamentals.</dd>
-                        </div>
-                    </dl>
-                </div>
-            </article>
-        </section>
-
-        <section id="stack" aria-labelledby="stack-title">
-            <div class="section-heading">
-                <span class="section-label">04</span>
-                <h2 id="stack-title">Capability Index</h2>
-            </div>
-
-            <dl class="skills">
-                <div>
-                    <dt>Service systems</dt>
-                    <dd>Go, Node.js, C# / .NET Core, Laravel, RabbitMQ, Apache Kafka</dd>
-                </div>
-                <div>
-                    <dt>Interface systems</dt>
-                    <dd>React, SolidJS, Vue, TypeScript, Flutter / Dart, Next.js, Vite, AvaloniaUI</dd>
-                </div>
-                <div>
-                    <dt>Infrastructure</dt>
-                    <dd>AWS, Google Cloud, Firebase, Docker, Kubernetes, Helm, GitHub Actions, Netlify, Vercel</dd>
-                </div>
-                <div>
-                    <dt>Data stores</dt>
-                    <dd>PostgreSQL, MySQL, MongoDB, Redis</dd>
-                </div>
-                <div>
-                    <dt>Telemetry</dt>
-                    <dd>Datadog, SigNoz, Prometheus, Grafana, CloudWatch</dd>
-                </div>
-                <div>
-                    <dt>AI tooling</dt>
-                    <dd>Codex, Claude, Augment Code, Ollama, Gemma, Qwen, OpenCode</dd>
-                </div>
-                <div>
-                    <dt>Hardware / network</dt>
-                    <dd>Arduino, Raspberry Pi, Proteus, network design, OpenWrt, OPNsense</dd>
-                </div>
-                <div>
-                    <dt>Research queue</dt>
-                    <dd>Rust, Axum, Iced, Dioxus</dd>
-                </div>
-            </dl>
-        </section>
-        </div>
-
-        <footer class="footer">
-            <span>&copy; 2026 Reyco Seguma</span>
-            <div class="footer-links">
-                <a href="#top">top</a>
-                <a href="https://github.com/xreyc" target="_blank" rel="noopener noreferrer">github</a>
-                <a href="https://linkedin.com/in/reyco-seguma" target="_blank" rel="noopener noreferrer">linkedin</a>
-            </div>
-        </footer>
-        </div>
     </main>
 
-    <div class="system-bar">
-        <div class="system-bar__info" aria-hidden="true">
-            <span class="system-bar__item"><i class="system-bar__dot"></i>Secure link</span>
-            <span class="system-bar__item">IP <strong data-sys-ip>resolving…</strong></span>
-            <span class="system-bar__item">Agent <strong data-sys-browser>—</strong></span>
-            <span class="system-bar__item system-bar__item--wide">OS <strong data-sys-os>—</strong></span>
-            <span class="system-bar__item system-bar__item--wide">Net <strong data-sys-net>—</strong></span>
-            <span class="system-bar__item system-bar__item--wide">Res <strong data-sys-res>—</strong></span>
+    <footer class="footer">
+        <div class="wrap footer__inner">
+            <span>© 2026 Reyco Seguma</span>
+            <div class="footer__links">
+                <a href="#top">Top</a>
+                <a href="https://github.com/xreyc" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://linkedin.com/in/reyco-seguma" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
         </div>
-        <label class="system-bar__zoom">
-            <span>Doc zoom</span>
-            <input type="range" min="70" max="170" step="5" value="100" data-doc-zoom aria-label="Zoom document">
-            <strong data-zoom-readout>100%</strong>
-        </label>
-    </div>
-    <script>
-        (() => {
-            const tabs = Array.from(document.querySelectorAll("[data-file-tab]"));
-            const downloadButton = document.querySelector("[data-download-record]");
-            const panels = Array.from(document.querySelectorAll("[data-file-panel]"));
-            const loader = document.querySelector(".classified-loader");
-            const loaderTitle = document.querySelector(".loader-title");
-            const loaderText = document.querySelector(".loader-text");
-            const loaderStatus = document.querySelector(".loader-status");
-            const labels = {
-                subject: "subject file",
-                assets: "system asset files",
-                architecture: "architecture schematics",
-                service: "service history",
-                capabilities: "capability index"
-            };
-            const hashMap = {
-                "#panel-subject": "subject",
-                "#panel-assets": "assets",
-                "#work": "assets",
-                "#panel-architecture": "architecture",
-                "#architecture": "architecture",
-                "#panel-service": "service",
-                "#experience": "service",
-                "#panel-capabilities": "capabilities",
-                "#education": "capabilities",
-                "#stack": "capabilities"
-            };
-            const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-            let activeFile = "subject";
-            let loadingTimer;
-            let revealTimer;
-            let bootTimer;
-            let bootHideTimer;
-
-            const syncControls = (file) => {
-                tabs.forEach((tab) => {
-                    const selected = tab.dataset.fileTab === file;
-                    tab.setAttribute("aria-selected", String(selected));
-                    tab.tabIndex = selected ? 0 : -1;
-                });
-            };
-
-            const revealFile = (file) => {
-                panels.forEach((panel) => {
-                    const selected = panel.dataset.filePanel === file;
-                    panel.hidden = !selected;
-                    panel.classList.toggle("is-active", selected);
-                });
-                syncControls(file);
-                activeFile = file;
-                window.setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: "auto" }), 0);
-            };
-
-            const setLoader = (active, file, mode = "decrypt") => {
-                if (!loader) return;
-                loader.classList.toggle("is-active", active);
-                loader.setAttribute("aria-hidden", String(!active));
-                if (mode === "boot") {
-                    if (loaderTitle) loaderTitle.textContent = "Access Authorization";
-                    if (loaderText) loaderText.textContent = "Establishing secure dossier session...";
-                    if (loaderStatus) loaderStatus.textContent = "Verifying clearance / mounting subject file";
-                    return;
-                }
-                if (loaderTitle) loaderTitle.textContent = "Clearance Check";
-                if (loaderText && file) {
-                    loaderText.textContent = `Decrypting ${labels[file]}...`;
-                }
-                if (loaderStatus) {
-                    loaderStatus.textContent = "Fetching compartment / decrypting record";
-                }
-            };
-
-            const openFile = (file, instant = false) => {
-                if (!labels[file] || file === activeFile) return;
-                window.clearTimeout(loadingTimer);
-                window.clearTimeout(revealTimer);
-
-                if (instant || prefersReducedMotion) {
-                    setLoader(false);
-                    revealFile(file);
-                    return;
-                }
-
-                setLoader(true, file, "decrypt");
-                loadingTimer = window.setTimeout(() => {
-                    revealFile(file);
-                }, 360);
-                revealTimer = window.setTimeout(() => {
-                    setLoader(false);
-                }, 720);
-            };
-
-            const bootSequence = (file) => {
-                window.clearTimeout(bootTimer);
-                window.clearTimeout(bootHideTimer);
-                revealFile(file);
-
-                if (prefersReducedMotion) {
-                    setLoader(false);
-                    return;
-                }
-
-                setLoader(true, file, "boot");
-                bootTimer = window.setTimeout(() => {
-                    setLoader(true, file, "decrypt");
-                }, 520);
-                bootHideTimer = window.setTimeout(() => {
-                    setLoader(false);
-                }, 1180);
-            };
-
-            tabs.forEach((tab, index) => {
-                tab.addEventListener("click", () => openFile(tab.dataset.fileTab));
-                tab.addEventListener("keydown", (event) => {
-                    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
-                    event.preventDefault();
-                    let nextIndex = index;
-                    if (event.key === "ArrowRight") nextIndex = (index + 1) % tabs.length;
-                    if (event.key === "ArrowLeft") nextIndex = (index - 1 + tabs.length) % tabs.length;
-                    if (event.key === "Home") nextIndex = 0;
-                    if (event.key === "End") nextIndex = tabs.length - 1;
-                    tabs[nextIndex].focus();
-                    openFile(tabs[nextIndex].dataset.fileTab);
-                });
-            });
-
-            downloadButton?.addEventListener("click", (event) => {
-                if (downloadButton.tagName === "A") return;
-                document.title = "reyco-seguma-confidential-dossier";
-                window.clearTimeout(loadingTimer);
-                window.clearTimeout(revealTimer);
-                window.clearTimeout(bootTimer);
-                window.clearTimeout(bootHideTimer);
-                setLoader(false);
-                window.print();
-            });
-
-            const initialFile = hashMap[window.location.hash] || "subject";
-            bootSequence(initialFile);
-        })();
-    </script>
-    <script>
-        (() => {
-            const $ = (selector) => document.querySelector(selector);
-
-            const clockEl = $("[data-utc-clock]");
-            if (clockEl) {
-                const tick = () => {
-                    clockEl.textContent = `${new Date().toISOString().slice(11, 19)} UTC`;
-                };
-                tick();
-                window.setInterval(tick, 1000);
-            }
-
-            const ua = navigator.userAgent;
-            const pick = (rules, fallback) => {
-                for (const [pattern, name] of rules) {
-                    const match = ua.match(pattern);
-                    if (match) return match[1] ? `${name} ${match[1]}` : name;
-                }
-                return fallback;
-            };
-
-            const browserEl = $("[data-sys-browser]");
-            if (browserEl) {
-                browserEl.textContent = pick([
-                    [/Edg\/(\d+)/, "EDGE"],
-                    [/OPR\/(\d+)/, "OPERA"],
-                    [/Firefox\/(\d+)/, "FIREFOX"],
-                    [/Chrome\/(\d+)/, "CHROME"],
-                    [/Version\/(\d+).+Safari/, "SAFARI"]
-                ], "UNKNOWN");
-            }
-
-            const osEl = $("[data-sys-os]");
-            if (osEl) {
-                osEl.textContent = pick([
-                    [/Windows NT/, "WINDOWS"],
-                    [/Android/, "ANDROID"],
-                    [/iPhone|iPad/, "IOS"],
-                    [/Mac OS X/, "MACOS"],
-                    [/Linux/, "LINUX"]
-                ], "UNKNOWN");
-            }
-
-            const netEl = $("[data-sys-net]");
-            if (netEl) {
-                const conn = navigator.connection;
-                netEl.textContent = conn && conn.effectiveType
-                    ? conn.effectiveType.toUpperCase() + (conn.downlink ? ` · ${conn.downlink}MBPS` : "")
-                    : "ENCRYPTED";
-            }
-
-            const resEl = $("[data-sys-res]");
-            if (resEl) {
-                resEl.textContent = `${window.screen.width}×${window.screen.height}`;
-            }
-
-            const ipEl = $("[data-sys-ip]");
-            if (ipEl) {
-                fetch("https://api.ipify.org?format=json")
-                    .then((response) => response.json())
-                    .then((data) => {
-                        ipEl.textContent = data.ip || "REDACTED";
-                    })
-                    .catch(() => {
-                        ipEl.textContent = "REDACTED";
-                    });
-            }
-
-            const paper = $(".paper-page");
-            const slider = $("[data-doc-zoom]");
-            const readout = $("[data-zoom-readout]");
-            if (paper && slider && readout) {
-                let baseWidth = null;
-                const zoomStyles = ["zoom", "width", "marginInline", "marginLeft"];
-                let printZoomSnapshot = null;
-                const applyZoom = () => {
-                    const zoom = Number(slider.value) / 100;
-                    readout.textContent = `${slider.value}%`;
-                    paper.style.zoom = "";
-                    paper.style.width = "";
-                    paper.style.marginInline = "";
-                    paper.style.marginLeft = "";
-                    if (zoom !== 1) {
-                        if (baseWidth === null) baseWidth = paper.offsetWidth;
-                        paper.style.width = `${baseWidth}px`;
-                        paper.style.zoom = zoom;
-                        if (zoom < 1) {
-                            paper.style.marginInline = "auto";
-                        } else {
-                            const containerWidth = paper.parentElement.clientWidth;
-                            const viewportWidth = document.documentElement.clientWidth;
-                            const scaledWidth = baseWidth * zoom;
-                            const shift = Math.min(
-                                (scaledWidth - containerWidth) / 2,
-                                Math.max((viewportWidth - containerWidth) / 2 - 12, 0)
-                            );
-                            paper.style.marginLeft = `${-shift / zoom}px`;
-                        }
-                    }
-                };
-                slider.addEventListener("input", applyZoom);
-                window.addEventListener("resize", () => {
-                    baseWidth = null;
-                    applyZoom();
-                });
-                window.addEventListener("beforeprint", () => {
-                    printZoomSnapshot = Object.fromEntries(
-                        zoomStyles.map((property) => [property, paper.style[property]])
-                    );
-                    zoomStyles.forEach((property) => {
-                        paper.style[property] = "";
-                    });
-                });
-                window.addEventListener("afterprint", () => {
-                    if (!printZoomSnapshot) return;
-                    zoomStyles.forEach((property) => {
-                        paper.style[property] = printZoomSnapshot[property] || "";
-                    });
-                    printZoomSnapshot = null;
-                });
-            }
-        })();
-    </script>
+    </footer>
 </body>
 </html>
