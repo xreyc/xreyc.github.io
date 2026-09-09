@@ -321,6 +321,19 @@
             letter-spacing: 0.04em;
             text-transform: uppercase;
         }
+        .card__logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            margin-bottom: 16px;
+            padding: 9px;
+            border-radius: 13px;
+            background: var(--bg-soft);
+            border: 1px solid var(--line);
+        }
+        .card__logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
         .card h3 { margin-top: 14px; font-size: 1.32rem; font-weight: 700; letter-spacing: -0.01em; }
         .card__year { margin-top: 6px; font-size: 0.84rem; color: var(--muted); }
         .card__body p { color: var(--text-soft); }
@@ -549,6 +562,7 @@
                     <!-- Maintainerd -->
                     <article class="card">
                         <div class="card__aside">
+                            <span class="card__logo"><img src="assets/projects/maintainerd.svg" alt="Maintainerd logo" width="56" height="56"></span>
                             <span class="card__tag">Creator · Open source</span>
                             <h3>Maintainerd</h3>
                             <p class="card__year">Cloud platform · in active development</p>
@@ -586,6 +600,7 @@
                     <!-- Pebbles -->
                     <article class="card">
                         <div class="card__aside">
+                            <span class="card__logo"><img src="assets/projects/pebbles.png" alt="Pebbles logo" width="56" height="56"></span>
                             <span class="card__tag">Creator · Open source</span>
                             <h3>Pebbles</h3>
                             <p class="card__year">GUI framework for Rust</p>
@@ -621,6 +636,7 @@
                     <!-- Medlexer -->
                     <article class="card">
                         <div class="card__aside">
+                            <span class="card__logo"><img src="assets/projects/medlexer.png" alt="Medlexer logo" width="56" height="56"></span>
                             <span class="card__tag">Core engineer</span>
                             <h3>Medlexer</h3>
                             <p class="card__year">Healthcare · HIS / LIS platform</p>
