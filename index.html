@@ -44,7 +44,7 @@
                 "image": "https://xreyc.github.io/assets/profile.jpeg",
                 "jobTitle": "Full Stack Software Engineer",
                 "email": "mailto:segumareyco@gmail.com",
-                "address": { "@type": "PostalAddress", "addressLocality": "Manila", "addressCountry": "PH" },
+                "address": { "@type": "PostalAddress", "addressLocality": "Davao", "addressCountry": "PH" },
                 "sameAs": [
                     "https://github.com/xreyc",
                     "https://linkedin.com/in/reyco-seguma"
@@ -131,14 +131,26 @@
         }
         .brand {
             display: inline-flex;
-            align-items: baseline;
-            gap: 9px;
+            align-items: center;
+            gap: 10px;
             font-weight: 700;
             font-size: 1.02rem;
             color: var(--text);
         }
         .brand:hover { text-decoration: none; color: var(--text); }
-        .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); transform: translateY(-1px); }
+        .brand__badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--accent-soft);
+            color: var(--accent);
+            flex: none;
+        }
+        .brand__badge svg { width: 18px; height: 18px; }
+        .brand:hover .brand__badge { background: var(--accent); color: #fff; }
         .nav { display: flex; align-items: center; gap: 28px; }
         .nav a {
             color: var(--text-soft);
@@ -322,6 +334,12 @@
             font-weight: 500;
             color: var(--text-soft);
         }
+        .chip--lang {
+            background: var(--accent-soft);
+            border-color: transparent;
+            color: var(--accent-strong);
+            font-weight: 600;
+        }
         .card__links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 18px; }
         .card__links a {
             display: inline-flex;
@@ -456,7 +474,10 @@
 <body>
     <header class="site-header">
         <div class="wrap site-header__inner">
-            <a class="brand" href="#top"><span class="dot"></span>Reyco Seguma</a>
+            <a class="brand" href="#top" aria-label="Reyco Seguma — home">
+                <span class="brand__badge" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></svg>
+                </span>Reyco Seguma</a>
             <nav class="nav" aria-label="Primary">
                 <a href="#work">Work</a>
                 <a href="#experience">Experience</a>
@@ -484,7 +505,7 @@
                     <div class="hero__meta">
                         <span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            Manila, Philippines
+                            Davao, Philippines
                         </span>
                         <span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
@@ -510,7 +531,7 @@
                     <div><dt>8+ yrs</dt><dd>Engineering experience</dd></div>
                     <div><dt>2</dt><dd>Open-source platforms built</dd></div>
                     <div><dt>Full stack</dt><dd>Backend · Cloud · Frontend</dd></div>
-                    <div><dt>Go · Rust</dt><dd>Core systems languages</dd></div>
+                    <div><dt>5 langs</dt><dd>C# · PHP · Go · JS · Rust</dd></div>
                 </dl>
             </div>
         </section>
@@ -710,6 +731,10 @@
                             <h2>Skills &amp; tech</h2>
                         </div>
                         <dl class="skills">
+                            <div class="skill-row">
+                                <dt>Languages</dt>
+                                <dd><div class="skill-tags"><span class="chip chip--lang">C#</span><span class="chip chip--lang">PHP</span><span class="chip chip--lang">Go</span><span class="chip chip--lang">JavaScript</span><span class="chip chip--lang">Rust</span></div></dd>
+                            </div>
                             <div class="skill-row">
                                 <dt>Backend</dt>
                                 <dd><div class="skill-tags"><span class="chip">Go</span><span class="chip">Node.js</span><span class="chip">C# / .NET Core</span><span class="chip">Laravel</span><span class="chip">RabbitMQ</span><span class="chip">Kafka</span></div></dd>

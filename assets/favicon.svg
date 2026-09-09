@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
-    <title id="title">rs — secure terminal tile</title>
-    <rect width="64" height="64" fill="#0c1315"/>
-    <rect x="1.5" y="1.5" width="61" height="61" fill="none" stroke="#5fb6ca" stroke-opacity="0.32" stroke-width="3"/>
-    <text x="32" y="40.5" font-family="'Courier Prime', 'Courier New', monospace" font-weight="700" font-size="37.5" letter-spacing="-1.5" fill="#5fb6ca" text-anchor="middle">rs</text>
+    <title id="title">Reyco Seguma</title>
+    <rect width="64" height="64" rx="14" fill="#1d4f8f"/>
+    <circle cx="32" cy="25" r="10" fill="#ffffff"/>
+    <path d="M12 54c0-11 9-17 20-17s20 6 20 17z" fill="#ffffff"/>
 </svg>
